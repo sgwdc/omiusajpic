@@ -20,6 +20,14 @@
     <?php wp_footer(); ?>
     </div><!-- end #footer -->
 </div>
+
+<?php
+  $IPsToIgnore = ["73.212.168.134", "10.19.76.1", "104.129.81.54"];
+  // Get the user's IP address
+  $ip = $_SERVER['REMOTE_ADDR'];
+  // Only track pageviews if it's not us
+  if (!in_array($ip, $IPsToIgnore)) {
+?>
 <!-- Old Analytics account which Christina Herman's Google account cherman@omiusa.org has only user level access to -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -39,5 +47,8 @@
   ga('create', 'UA-83880741-1', 'auto');
   ga('send', 'pageview');
 </script>
+<?php
+  }
+?>
 </body>
 </html>
