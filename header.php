@@ -18,7 +18,6 @@ if ($_REQUEST['member_logout']==1) member_logout();
 <link rel="feed alternate" type="application/rss+xml"
       href="<?php bloginfo_rss('rss_url') ?>" title="<?php bloginfo_rss('title') ?>">
 <meta name="description" content="The Missionary Oblates of Mary Immaculate's Justice, Peace, and Integrity of Creation effort is a global initiative to promote justice, equality, peace, and a clean and sustainable environment for all." />
-<meta name="keywords" content="missionary, peace, catholic, oblates, social justice, economic justice, faith responsibile investing, socially responsible investing, faith based, ecology, environmental, eco mission, death penalty, border rights, immigrants, aids, hiv, community organizing, climate change" />
 <link rel="shortcut icon" href="<?php bloginfo('template_directory') ?>/favicon.ico">
 <?php wp_head(); ?>
 </head>
