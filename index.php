@@ -56,10 +56,10 @@ if (strstr($page_uri,'/news')) $newspage = true;
     	<?php if (is_archive()) : ?>
         <h1><?php if (!$newspage && (is_page_template('spanish.php')||is_category(206)||in_category(206))) : ?>Noticias en Espa&ntilde;ol 
 			<?php else : ?>News Archives <?php wp_title(); ?><?php endif; ?></h1>
-        <? else : ?>
+        <?php else : ?>
     	<h1>Latest OMI JPIC News <?php if (is_category()) : ?> in <em><?php single_cat_title(); ?></em> <?php elseif (is_tag()) : ?> 
  tagged with <em><?php single_tag_title(); ?></em> <?php else : $main_news_page = 1 ?>   <?php endif; ?></h1>
- 		<? endif; ?>
+ 		<?php endif; ?>
     <?php endif; ?>
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -113,7 +113,7 @@ if (strstr($page_uri,'/news')) $newspage = true;
         <?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
         <?php edit_post_link('Edit', '<p align="center"><b>[ ', ' ]</b></p>'); ?>
         <?php if (is_page_template('spanish.php')||is_category(206)) : ?><br /><br /><br /><br /><br /><br /><br />
-        <br /><br /><br /><br /><br /><br /><br /><br /><? endif; ?>
+        <br /><br /><br /><br /><br /><br /><br /><br /><?php endif; ?>
     
             <!-- Comments if applicable -->
             <?php if ((is_page() || is_single()) && ('open' == $post-> comment_status)) : ?>	
@@ -165,7 +165,7 @@ if (strstr($page_uri,'/news')) $newspage = true;
     
     	<?php if (!is_page() and is_single()) : ?>
             <div class="singlepagebottom">
-            <?php if ($newspage || !(is_page_template('spanish.php')||is_category(206)||in_category(206))) : ?><p><strong>Posted in:</strong> <?php the_category(', ') ?></p><? endif; ?>
+            <?php if ($newspage || !(is_page_template('spanish.php')||is_category(206)||in_category(206))) : ?><p><strong>Posted in:</strong> <?php the_category(', ') ?></p><?php endif; ?>
             <p><?php if ($newspage || !(is_page_template('spanish.php')||is_category(206)||in_category(206))) : ?><?php the_tags('<strong>Related keywords:</strong> ', ', ', ''); ?><?php else : ?><?php the_tags('<strong>Palabras clave relacionadas:</strong> ', ', ', ''); // spanish ?><?php endif; ?></p>
             </div>
         <?php endif; ?>

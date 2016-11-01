@@ -33,7 +33,7 @@ if (!is_page('search-results')) :
 
     </div>
     
-<? endif ; ?>
+<?php endif ; ?>
 
 <?
 /*
@@ -41,7 +41,7 @@ if (!is_page('search-results')) :
             <?php $issue_bullet_id = 7083; ?>
             <li><a href="<?php echo get_permalink($issue_bullet_id); ?>" class="big">Human Dignity</a>
             <ul class="inlinelist blacklink">
-			<? wp_list_pages("sort_column=menu_order&child_of=$issue_bullet_id&depth=1&title_li="); ?>
+			<?php wp_list_pages("sort_column=menu_order&child_of=$issue_bullet_id&depth=1&title_li="); ?>
             <li class="last"><a href="<?php echo get_permalink($issue_bullet_id); ?>">more...</a></li>
             </ul>
             </li>

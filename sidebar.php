@@ -23,9 +23,9 @@ if (strstr($page_uri,'/news')) $newspage = true;
         	<input type="hidden" name="cx" value="017409278450099449193:wfbtxpyrh6k" />
             <input type="hidden" name="cof" value="FORID:11" />
             <input type="hidden" name="ie" value="UTF-8" />
-            <h4><label><?php if ($newspage || !(is_page_template('spanish.php')||is_category(206)||in_category(206))) : ?>Search<?php else : ?>Buscar<? endif; ?></label></h4>
+            <h4><label><?php if ($newspage || !(is_page_template('spanish.php')||is_category(206)||in_category(206))) : ?>Search<?php else : ?>Buscar<?php endif; ?></label></h4>
             <input type="text" name="q" class="lefttextinput"<?php if ($newspage || !(is_page_template('spanish.php')||is_category(206)||in_category(206))) : ?> value="Search our site" 
-            	onfocus="if (this.value=='Search our site') this.value='';" onblur="if (this.value=='') this.value='Search our site';" <? endif; ?> />
+            	onfocus="if (this.value=='Search our site') this.value='';" onblur="if (this.value=='') this.value='Search our site';" <?php endif; ?> />
             <input type="submit" value="<?php if ($newspage || !(is_page_template('spanish.php')||is_category(206)||in_category(206))) : ?>Go<?php else : ?>Ir<?php endif; ?>" class="leftsubmit" />
         </form>
         <!--<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&lang=en"></script>-->

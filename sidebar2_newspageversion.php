@@ -120,7 +120,7 @@ $show_members_sidebar = 0;
          <?php endforeach; ?>
         </ul>
         <?php endif; ?>
-        <? /* end special sidebar */ ?>
+        <?php /* end special sidebar */ ?>
 
 
         <h4><?php echo $news_title; ?></h4>
@@ -197,4 +197,4 @@ $show_members_sidebar = 0;
 
     </div>
     
-<? endif ; ?>
+<?php endif ; ?>

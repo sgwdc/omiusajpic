@@ -38,7 +38,7 @@ get_header(); ?>
             <?php $issue_bullet_id = 7083; ?>
             <li><a href="<?php echo get_permalink($issue_bullet_id); ?>" class="big">Human Dignity</a>
             <ul class="inlinelist blacklink">
-			<? wp_list_pages("sort_column=menu_order&child_of=$issue_bullet_id&depth=1&title_li="); ?>
+			<?php wp_list_pages("sort_column=menu_order&child_of=$issue_bullet_id&depth=1&title_li="); ?>
             <li class="last"><a href="<?php echo get_permalink($issue_bullet_id); ?>">more...</a></li>
             </ul>
             </li>
@@ -47,7 +47,7 @@ get_header(); ?>
             <?php $issue_bullet_id = 19; ?>
             <li><a href="<?php echo get_permalink($issue_bullet_id); ?>" class="big">Integrity of Creation</a>
             <ul class="inlinelist blacklink">
-			<? wp_list_pages("sort_column=menu_order&child_of=$issue_bullet_id&depth=1&title_li="); ?>
+			<?php wp_list_pages("sort_column=menu_order&child_of=$issue_bullet_id&depth=1&title_li="); ?>
             <li class="last"><a href="<?php echo get_permalink($issue_bullet_id); ?>">more...</a></li>
             </ul>
             </li>
@@ -55,7 +55,7 @@ get_header(); ?>
             <!-- Faith Consistent investing --> 
             <li class="last"><a href="<?php echo get_permalink(20); ?>" class="big">Faith Consistent Investing</a>
             <ul class="inlinelist blacklink">
-			<? wp_list_pages('sort_column=menu_order&child_of=20&depth=1&title_li='); ?>
+			<?php wp_list_pages('sort_column=menu_order&child_of=20&depth=1&title_li='); ?>
             <li class="last"><a href="<?php echo get_permalink(20); ?>">more...</a></li>
             </ul>
             </li>
@@ -64,7 +64,7 @@ get_header(); ?>
             <?php $issue_bullet_id = 47; ?>
             <li><a href="<?php echo get_permalink($issue_bullet_id); ?>" class="big">Peace</a>
             <ul class="inlinelist blacklink">
-			<? wp_list_pages("sort_column=menu_order&child_of=$issue_bullet_id&depth=1&title_li="); ?>
+			<?php wp_list_pages("sort_column=menu_order&child_of=$issue_bullet_id&depth=1&title_li="); ?>
             <li class="last"><a href="<?php echo get_permalink($issue_bullet_id); ?>">more...</a></li>
             </ul>
             </li>
@@ -72,7 +72,7 @@ get_header(); ?>
             <?php /* <!-- Integrity of Creation -->
             <li><a href="<?php echo get_permalink(19); ?>" class="big">Integrity of Creation</a>
             <ul class="inlinelist blacklink">
-			<? wp_list_pages('sort_column=menu_order&child_of=19&depth=1&title_li='); ?>
+			<?php wp_list_pages('sort_column=menu_order&child_of=19&depth=1&title_li='); ?>
             <li><a href="<?php echo get_permalink(19); ?>">more...</a></li>
             </ul>
             </li>
@@ -83,7 +83,7 @@ get_header(); ?>
             
             <!-- Peace -->
             <ul class="inlinelist blacklink">
-			<? wp_list_pages('sort_column=menu_order&child_of=21&depth=1&title_li='); ?>
+			<?php wp_list_pages('sort_column=menu_order&child_of=21&depth=1&title_li='); ?>
             <li><a href="<?php echo get_permalink(21); ?>">more...</a></li>
 			
 			*/ ?>
@@ -92,13 +92,13 @@ get_header(); ?>
             <!-- Social Justice -->
             <li><a href="<?php echo get_permalink(21); ?>" class="big">Social Justice</a>
             <ul class="inlinelist blacklink">
-			<? wp_list_pages('sort_column=menu_order&child_of=21&depth=1&title_li='); ?>
+			<?php wp_list_pages('sort_column=menu_order&child_of=21&depth=1&title_li='); ?>
             <li><a href="<?php echo get_permalink(21); ?>">more...</a></li>
             
             <!-- Social Justice -->
             <li><a href="<?php echo get_permalink(21); ?>" class="big">Social Justice</a>
             <ul class="inlinelist blacklink">
-			<? wp_list_pages('sort_column=menu_order&child_of=21&depth=1&title_li='); ?>
+			<?php wp_list_pages('sort_column=menu_order&child_of=21&depth=1&title_li='); ?>
             <li><a href="<?php echo get_permalink(21); ?>">more...</a></li>
             </ul>
 			</li>
@@ -106,7 +106,7 @@ get_header(); ?>
             <!-- Economic Justice -->
             <li><a href="<?php echo get_permalink(46); ?>" class="big">Economic Justice</a>
             <ul class="inlinelist blacklink">
-			<? wp_list_pages('sort_column=menu_order&child_of=46&depth=1&title_li='); ?>
+			<?php wp_list_pages('sort_column=menu_order&child_of=46&depth=1&title_li='); ?>
             <li><a href="<?php echo get_permalink(46); ?>">more...</a></li>
             </ul>
             </li>
@@ -114,7 +114,7 @@ get_header(); ?>
             <!-- Peace -->
             <li><a href="<?php echo get_permalink(47); ?>" class="big">Peace</a>
             <ul class="inlinelist blacklink">
-			<? wp_list_pages('sort_column=menu_order&child_of=47&depth=1&title_li='); ?>
+			<?php wp_list_pages('sort_column=menu_order&child_of=47&depth=1&title_li='); ?>
             <li><a href="<?php echo get_permalink(47); ?>">more...</a></li>
             </ul>
             </li>

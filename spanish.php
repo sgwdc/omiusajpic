@@ -45,10 +45,10 @@ Template Name: Spanish
     <?php if (!is_single() && !is_page()) : ?>
     	<?php if (is_archive()) : ?>
         <h1>News Archives <?php wp_title(); ?></h1>
-        <? else : ?>
+        <?php else : ?>
     	<h1>Latest OMI JPIC News <?php if (is_category()) : ?> in <em><?php single_cat_title(); ?></em> <?php elseif (is_tag()) : ?> 
  tagged with <em><?php single_tag_title(); ?></em>   <?php endif; ?></h1>
- 		<? endif; ?>
+ 		<?php endif; ?>
     <?php endif; ?>
     
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>

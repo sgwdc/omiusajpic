@@ -21,7 +21,7 @@ Template Name: Sitemap
     <div class="interiorcontents">
 	
     <ul>
-	<? wp_list_pages('title_li='); ?>
+	<?php wp_list_pages('title_li='); ?>
     </ul>
     
     </div>
