@@ -13,7 +13,6 @@ if ($_REQUEST['member_logout']==1) member_logout();
 <title><?php wp_title('',true,''); ?><?php if (!is_home()) echo " - "; ?><?php bloginfo('name'); ?></title>
 <style media="all" type="text/css">
 @import url( <?php bloginfo('stylesheet_url'); ?> );
-@import url(/wp-content/plugins/events-calendar/css/events-calendar.css); 
 </style>
 <script type="text/javascript" src="<?php bloginfo('url'); ?>/scripts/swfobject.js"></script>
 <link rel="feed alternate" type="application/rss+xml"
