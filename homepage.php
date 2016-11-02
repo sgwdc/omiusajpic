@@ -33,16 +33,34 @@ get_header();
 		<div class="column" id="homepageleft">
 			<!-- News -->
 			<h3><a href="news" class="darkgraylink">Recent News &amp; Updates</a></h3>
-			<ul class="homebullets">
+			<?php
+			// Get homepage posts 
+			$lastposts = get_posts('numberposts=3&category=90');
+			foreach($lastposts as $post) :
+				setup_postdata($post);
+				?>
+				<p>
+				<a href="<?php the_permalink(); ?>" class="big"><?php the_title(); ?></a><br>
 				<?php
-				// Get homepage posts 
-				$lastposts = get_posts('numberposts=3&category=90');
-				foreach($lastposts as $post) :
-					setup_postdata($post);
-					?>
-					<li><a href="<?php the_permalink(); ?>" class="big"><?php the_title(); ?></a> <?php the_time('F jS, Y') ?></li>
-				<?php endforeach; ?>
-			</ul>
+					// If a "Featured Image" exists for this post, display it
+					if (has_post_thumbnail($post)) {
+						$thumbnailURL = get_the_post_thumbnail_url($post, $size="thumbnail");
+						echo '<img src="' . $thumbnailURL . '" style="float:left; padding:2px 5px 0 0;">';
+					}
+					// Display the post date
+					the_time('F jS, Y');
+					echo ' -- ';
+					// Display an excerpt of the post content
+					$thecontent = wp_strip_all_tags(get_the_content(), false);
+					$excerpt = substr($thecontent, 0, 255);
+					echo $excerpt;
+				?>
+				</p>
+				<div class="clearboth"></div>
+				<br>
+			<?php endforeach; ?>
+
+			<p><a href="/news/">See more news &amp; updates &gt;</a></p>
 		</div>
 	</div>
 </div>
