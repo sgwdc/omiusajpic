@@ -31,9 +31,17 @@
 	table#navbar td:hover a {
 		color: #4281bf; 
 	}
+	table#navbar td#home_icon {
+		background-image: url('<?php echo get_template_directory_uri() . "/images/homeicon_white.png"; ?>');
+		background-repeat: no-repeat;
+		background-position: center; 
+	}
+	table#navbar td#home_icon:hover {
+		background-image: url('<?php echo get_template_directory_uri() . "/images/homeicon_blue.png"; ?>');
+	}
 </style>
 <table id="navbar"><tr>
-	<td><a href="/">Home</a></td>
+	<td id="home_icon"><a href="/"> &nbsp; &nbsp; &nbsp; &nbsp; </a></td>
 	<td><a href="/about/">About Us</a></td>
 	<td><a href="/issues/">Issue Areas</a></td>
 	<td><a href="/our-impact/">Our Impact</a></td>
