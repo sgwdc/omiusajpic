@@ -2,12 +2,27 @@
 /*
 Template Name: Homepage
 */
-get_header(); ?>
+get_header();
+?>
 
-<?php // Not included in v2.0 of OMI JPIC theme: get_sidebar();
-get_sidebar(); ?>
+<div>
+    Insert hero image here
+</div>
+
+<?php
+// Include the horizontal navbar
+include 'navbar.php';
+?>
+
+<?php // Not included in v2.0 of OMI JPIC theme: get_sidebar(); ?>
+
 	<!-- MAIN SECTION -->
     <div class="mainhome">
+
+    <!-- Breadcrumb -->
+    <div id="topbreadcrumb">
+        Homepage
+    </div>
 
         <!-- MAIN CONTENT -->
         <div class="homecontents">

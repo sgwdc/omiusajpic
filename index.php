@@ -14,6 +14,11 @@ if (strstr($page_uri,'/news')) $newspage = true;
 
 <?php get_header(); ?>
 
+<?php
+// Include the horizontal navbar
+include 'navbar.php';
+?>
+
 <?php // Not included in v2.0 of OMI JPIC theme: get_sidebar(); ?>
 
 	<!-- MAIN SECTION -->
