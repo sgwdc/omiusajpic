@@ -740,3 +740,7 @@ span.wpaudio-container {
 .redoutline {
 	border:1px #f00 solid;
 }
+/* AddThis */
+div.addthis_toolbox {
+	padding:20px 0;
+}
