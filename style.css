@@ -21,7 +21,7 @@ body {
 }
 #container {
 	margin: 0 auto 0 auto;
-	width: 1000px;
+	width: 980px;
 	text-align: left;
 	background: url(images/bg_pageshadow.gif) repeat-y bottom center;
 	padding: 0 6px 0 6px;
