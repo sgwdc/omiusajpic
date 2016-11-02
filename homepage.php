@@ -6,7 +6,7 @@ get_header();
 ?>
 
 <div>
-    Insert hero image here
+    <img src="<?php bloginfo('template_directory') ?>/images/hero_screenshot_for_placement.jpg" >
 </div>
 
 <?php
