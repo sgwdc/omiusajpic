@@ -57,11 +57,14 @@
 				<div style="padding-top:10px;">
 					<a href="/">Home</a> &nbsp; | &nbsp; <a href="/about/contact/">Contact</a> &nbsp; | &nbsp; <a href="/search-results/">Search</a>
 				</div>
-				<div style="padding-top:30px;">
-					<h1 style="font-size:28px;"><?php bloginfo('name'); ?></h1>
+				<div style="padding-top:25px;">
+					<h1 style="font-size:28px;">Justice, Peace, and Integrity of Creation</h1>
 				</div>
 				<div style="padding-top:0px;">
-					<h3 style="font-size:14px; font-style: italic;"><?php bloginfo('description'); ?></h3>
+					<h3 style="font-size:15px; font-style: italic;">A ministry of Missionary Oblates of Mary Immaculate</h3>
+				</div>
+				<div>
+					<h3 style="font-size:12px; font-style: italic;">United States Province</h3>
 				</div>
 			</div>
 			<div style="width:139px; float:right; color:#fff; padding:25px 10px 0 0;">
