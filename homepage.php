@@ -43,17 +43,17 @@ get_header();
 					<li><a href="<?php the_permalink(); ?>" class="big"><?php the_title(); ?></a> <?php the_time('F jS, Y') ?></li>
 				<?php endforeach; ?>
 			</ul>
-
-			<ul class="homebullets">
-			<a class="twitter-timeline" href="https://twitter.com/omiusaJPIC" data-widget-id="682618667486556160">Tweets by @omiusaJPIC</a>
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-			</ul>
 		</div>
 	</div>
 </div>
 
 <div class="column" id="homepageright">
-	Insert right side content here
+	<a class="twitter-timeline" href="https://twitter.com/omiusaJPIC" data-widget-id="682618667486556160">Tweets by @omiusaJPIC</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </div><!-- end #main -->
+
+<div class="clearboth"></div>
+<br>
+<br>
 
 <?php get_footer(); ?>
