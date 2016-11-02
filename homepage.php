@@ -4,10 +4,10 @@ Template Name: Homepage
 */
 get_header(); ?>
 
-<?php get_sidebar(); ?>
-
+<?php // Not included in v2.0 of OMI JPIC theme: get_sidebar();
+get_sidebar(); ?>
 	<!-- MAIN SECTION -->
-    <div id="main" class="mainhome">
+    <div class="mainhome">
 
         <!-- MAIN CONTENT -->
         <div class="homecontents">

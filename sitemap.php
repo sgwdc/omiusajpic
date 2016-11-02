@@ -6,11 +6,10 @@ Template Name: Sitemap
 
 
 <?php get_header(); ?>
-
-<?php get_sidebar(); ?>
+<?php // Not included in v2.0 of OMI JPIC theme: get_sidebar(); ?>
 
 	<!-- MAIN SECTION -->
-    <div id="main" class="maininterior">
+    <div class="maininterior">
 
     <!-- Breadcrumb -->
     <div id="topbreadcrumb">    	

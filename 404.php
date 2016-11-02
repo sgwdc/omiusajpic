@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
-<?php get_sidebar(); ?>
+<?php // Not included in v2.0 of OMI JPIC theme: get_sidebar(); ?>
 
 	<!-- MAIN SECTION -->
-    <div id="main" class="maininterior">
+    <div class="maininterior">
 
     <!-- Breadcrumb -->
     <div id="topbreadcrumb">    	
@@ -15,7 +15,7 @@
 	
   	<h1>Page Not Found</h1>
     
-    <p>You may wish to return to the <a href="/">homepage</a> or review the <a href="/sitemap">sitemap</a> to find what you're looking for. Please feel 
+    <p>You may wish to return to the <a href="/">homepage</a> to find what you're looking for. Please feel 
     free to <a href="/about/contact">contact us</a> regarding this error.</p>
     
     </div>
