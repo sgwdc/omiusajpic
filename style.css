@@ -93,16 +93,10 @@ ul.inlinelist li.last:after {
 /* HEADER STYLES */
 #masthead {
 	height: 145px;
-	/*
-	background: url(images/masthead.jpg) bottom center no-repeat #4281bf;
-	*/
 	background: #4281bf;
 	/* Moved to table#navbar
 	border-bottom: 12px solid #0c1208;
 	*/
-}
-.spanish #masthead {
-	background: url(images/masthead_spanish.jpg) bottom center no-repeat #4281bf;
 }
 
 /* MAIN SECTION */
