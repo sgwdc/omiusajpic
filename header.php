@@ -54,7 +54,7 @@ if (strstr($page_uri,'/news')) $newspage = true;
             <div style="padding-top:10px;">
                 <a href="/">Home</a> &nbsp; | &nbsp; <a href="/about/contact/">Contact</a> &nbsp; | &nbsp; <a href="http://omiusajpic.livingstreets.com:8601/search-results/?cx=017409278450099449193%3Awfbtxpyrh6k&cof=FORID%3A11&ie=UTF-8&q=Search+our+site&siteurl=">Search</a>
             </div>
-            <div style="padding-top:20px;">
+            <div style="padding-top:30px;">
                 <h1 style="font-size:28px;"><?php bloginfo('name'); ?></h1>
             </div>
             <div style="padding-top:0px;">
