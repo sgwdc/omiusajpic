@@ -1,6 +1,6 @@
 <?php 
-// HIDE FROM SOME PAGES
-if (!is_page('search-results')) : 
+// NO, do not hide this sidebar from the search results page
+//if (!is_page('search-results')) : 
 ?>
 
 <?php 
@@ -196,5 +196,4 @@ $show_members_sidebar = 0;
         
 
     </div>
-    
-<?php endif ; ?>
+<?php // endif ; ?>
