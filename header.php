@@ -11,7 +11,14 @@
 <head>
 	<?php /* if (in_category(206)) echo '<!--- Category 206 --->'; else echo '<!--- no category info --->'; */ ?>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title><?php wp_title('',true,''); ?><?php if (!is_home()) echo " - "; ?><?php bloginfo('name'); ?></title>
+	<title><?php
+	// If this is NOT the front page, include the page title in the HTML title
+	if (!is_front_page()) {
+		wp_title('&raquo;', true, 'right');
+	}
+	// Add the blog name to the HTML title
+	bloginfo('name');
+	?></title>
 	<style media="all" type="text/css">
 		@import url( <?php bloginfo('stylesheet_url'); ?> );
 	</style>
