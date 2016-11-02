@@ -102,9 +102,6 @@ ul.inlinelist li.last:after {
 .spanish #masthead {
 	background: url(images/masthead_spanish.jpg) bottom center no-repeat #4281bf;
 }
-#masthead:hover {
-	cursor: pointer;
-}
 
 /* MAIN SECTION */
 #main {

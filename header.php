@@ -46,7 +46,6 @@ if (strstr($page_uri,'/news')) $newspage = true;
         	<a href="<?php bloginfo('url'); ?>">English</a>
         <?php endif; ?>
     </div><!-- end #topnav -->
-    <a href="<?php bloginfo('url'); ?><?php if (!$newspage&&(is_page_template('spanish.php')||is_category(206)||in_category(206))) : /*if (is_page_template('spanish.php')||is_category(206)||in_category(206)) :*/ /*if ((is_archive() && is_category(206))||(is_page_template('spanish.php')||in_category(206)))*/ ?>/espanol<?php endif; ?>" title="Home">
     <div id="masthead">
         <div style="width:125px; float:left; padding:10px 75px 0 10px;">
             <img src="<?php bloginfo('template_directory') ?>/images/logo_v2.png" alt="OMI JPIC logo">
@@ -65,7 +64,7 @@ if (strstr($page_uri,'/news')) $newspage = true;
         <div style="width:139px; float:right; color:#fff; padding:25px 10px 0 0;">
             <img src="<?php bloginfo('template_directory') ?>/images/omi_logo_color.png" alt="OMI logo">
         </div>
-    </div></a><!-- end #masthead -->
+    </div><!-- end #masthead -->
 <style>
 table#navbar {
     width:100%;
