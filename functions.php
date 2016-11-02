@@ -48,4 +48,8 @@ function remove_private_prefix($title) {
 
 add_filter('the_title','remove_private_prefix');
 remove_action('wp_head', 'wp_generator');
+
+// Enable "Featured Images" for pages and posts
+add_theme_support('post-thumbnails');
+
 ?>
