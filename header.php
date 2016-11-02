@@ -72,12 +72,14 @@ table#navbar {
     background-color: #4281bf;
     color: #fff;
     font-size:18px;
-    height:45px;
+    /* Single pixel border across the top */
     border-top: 1px solid #fff;
+    /* 12px border across the bottom */
     border-bottom: 12px solid #0c1208;
     /* Not sure why this is necessary but it avoids a border around the td cells */
     border-collapse: collapse;
 }
+/* Add a vertical divider after each button (except the last) */
 table#navbar td {
     text-align: center;
     border-right: 1px #fff solid;
@@ -87,16 +89,24 @@ table#navbar td:last-child {
 }
 table#navbar td:hover {
     background-color: #fff;
-    color: #4281bf;
+}
+table#navbar td a {
+    color: #fff;
+    text-decoration: none;
+    display:block;
+    padding:10px 0;
+}
+table#navbar td:hover a {
+    color: #4281bf; 
 }
 </style>
 <table id="navbar"><tr>
-    <td>Home</td>
-    <td>About Us</td>
-    <td>Issue Areas</td>
-    <td>Our Impact</td>
-    <td>Get Involved</td>
-    <td>Resources</td>
-    <td>Partners</td>
-    <td>Support Us</td>
+    <td><a href="/">Home</a></td>
+    <td><a href="1">About Us</a></td>
+    <td><a href="2">Issue Areas</a></td>
+    <td><a href="3">Our Impact</a></td>
+    <td><a href="4">Get Involved</a></td>
+    <td><a href="5">Resources</a></td>
+    <td><a href="6">Partners</a></td>
+    <td><a href="7">Support Us</a></td>
 </tr></table>
