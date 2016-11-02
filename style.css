@@ -85,7 +85,9 @@ ul.inlinelist li.last:after {
 }
 #topnav a:hover {
 	color: #fff;
+	/* Not always!
 	text-decoration: underline;
+	*/
 }
 
 /* HEADER STYLES */
@@ -490,7 +492,9 @@ a.blacklink:hover, a.darkgraylink:hover, ul.blacklink a:hover {
 	color: #4281bf;
 }
 #topbreadcrumb a:hover {
+	/* Not always
 	text-decoration: underline;
+	*/
 }
 #topbreadcrumb a.open:link, #topbreadcrumb a.open:visited {
 	color: #35462C;
@@ -655,7 +659,9 @@ h2.newsheadline {
 }
 #footer a:hover {
 	color: #fff;
+	/* Not always!
 	text-decoration: underline;
+	*/
 }
 #footer p {
 	margin: 0;
