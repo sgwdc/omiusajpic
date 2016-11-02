@@ -664,7 +664,8 @@ h2.newsheadline {
 	margin: 0 0 0 5px;
 	background: url(images/icon_tiny_pipe_white.gif) no-repeat left;
 }
-#footer ul li.first {
+/* Omit icon_tiny_pipe_white.gif for the first item in the footer navigation */
+#footer ul li:nth-of-type(1) {
 	background: none;
 }
 

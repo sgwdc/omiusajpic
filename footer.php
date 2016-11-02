@@ -1,18 +1,24 @@
+
+
+
+
+
+
+
+
+
 <!-- FOOTER -->
     <div id="footer">
     <ul>
-		<li class="first"><a href="/espanol">En Español</a></li>
-        <li><a href="/sitemap">Sitemap</a></li>
-	</ul>
-    <ul>
-        <li class="first"><a href="/news">News</a></li>
-        <li><a href="/issues">Issues</a></li>
-        <li><a href="/global">Global</a></li>
-        <li><a href="/resources">Resources</a></li>
-        <li><a href="/action">Take Action</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/members">Members</a></li>
-           <li><a href="http://secure.oblatesusa.org/p-2023-donation.aspx?source=M17IGI202">Donate</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About Us</a></li>
+      <li><a href="/issues/">Issue Areas</a></li>
+      <li><a href="/our-impact/">Our Impact</a></li>
+      <li><a href="/action/">Get Involved</a></li>
+      <li><a href="/resources/">Resources</a></li>
+      <li><a href="/about/partners/">Partners</a></li>
+      <li><a href="http://secure.oblatesusa.org/p-2023-donation.aspx?source=M17IGI202" target="_blank">Support Us</a></li>
+      <li><a href="/espanol">En Español</a></li>
     </ul>
     <p>Oblates JPIC Office 391 Michigan Ave NE, Washington, DC 20017 USA | phone (202) 529-4505 | fax (202) 529-4572<br />
 	&copy;<?php echo date('Y') ?> Missionary Oblates of Mary Immaculate | <a href="/about/privacy">Privacy Policy</a> | <a href="/about/contact">Contact Us</a></p>
