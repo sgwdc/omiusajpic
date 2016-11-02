@@ -48,7 +48,7 @@ if (strstr($page_uri,'/news')) $newspage = true;
     </div><!-- end #topnav -->
     <div id="masthead">
         <div style="width:125px; float:left; padding:10px 75px 0 10px;">
-            <img src="<?php bloginfo('template_directory') ?>/images/logo_v2.png" alt="OMI JPIC logo">
+            <a href="/"><img src="<?php bloginfo('template_directory') ?>/images/logo_v2.png" alt="OMI JPIC logo"></a>
         </div>
         <div style="width:600px; float:left; color:#fff;">
             <div style="padding-top:10px;">
@@ -62,7 +62,7 @@ if (strstr($page_uri,'/news')) $newspage = true;
             </div>
         </div>
         <div style="width:139px; float:right; color:#fff; padding:25px 10px 0 0;">
-            <img src="<?php bloginfo('template_directory') ?>/images/omi_logo_color.png" alt="OMI logo">
+            <a href="http://www.omiusa.org/" target="_blank"><img src="<?php bloginfo('template_directory') ?>/images/omi_logo_color.png" alt="OMI logo"></a>
         </div>
     </div><!-- end #masthead -->
 <style>
@@ -101,11 +101,11 @@ table#navbar td:hover a {
 </style>
 <table id="navbar"><tr>
     <td><a href="/">Home</a></td>
-    <td><a href="1">About Us</a></td>
-    <td><a href="2">Issue Areas</a></td>
-    <td><a href="3">Our Impact</a></td>
-    <td><a href="4">Get Involved</a></td>
-    <td><a href="5">Resources</a></td>
-    <td><a href="6">Partners</a></td>
-    <td><a href="7">Support Us</a></td>
+    <td><a href="/about/">About Us</a></td>
+    <td><a href="/issues/">Issue Areas</a></td>
+    <td><a href="/our-impact/">Our Impact</a></td>
+    <td><a href="/action/">Get Involved</a></td>
+    <td><a href="/resources/">Resources</a></td>
+    <td><a href="/about/partners/">Partners</a></td>
+    <td><a href="http://secure.oblatesusa.org/p-2023-donation.aspx?source=M17IGI202" target="_blank">Support Us</a></td>
 </tr></table>
