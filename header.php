@@ -46,6 +46,57 @@ if (strstr($page_uri,'/news')) $newspage = true;
         	<a href="<?php bloginfo('url'); ?>">English</a>
         <?php endif; ?>
     </div><!-- end #topnav -->
-    <a href="<?php bloginfo('url'); ?><?php if (!$newspage&&(is_page_template('spanish.php')||is_category(206)||in_category(206))) : /*if (is_page_template('spanish.php')||is_category(206)||in_category(206)) :*/ /*if ((is_archive() && is_category(206))||(is_page_template('spanish.php')||in_category(206)))*/ ?>/espanol<?php endif; ?>" title="Home"><div id="masthead">
-            <h1 class="hidden"><?php bloginfo('name'); ?> - <?php bloginfo('description'); ?></h1>
-        </div></a><!-- end #masthead -->
+    <a href="<?php bloginfo('url'); ?><?php if (!$newspage&&(is_page_template('spanish.php')||is_category(206)||in_category(206))) : /*if (is_page_template('spanish.php')||is_category(206)||in_category(206)) :*/ /*if ((is_archive() && is_category(206))||(is_page_template('spanish.php')||in_category(206)))*/ ?>/espanol<?php endif; ?>" title="Home">
+    <div id="masthead">
+        <div style="width:125px; float:left; padding:10px 75px 0 10px;">
+            <img src="<?php bloginfo('template_directory') ?>/images/logo_v2.png" alt="OMI JPIC logo">
+        </div>
+        <div style="width:600px; float:left; color:#fff;">
+            <div style="padding-top:10px;">
+                <a href="/">Home</a> &nbsp; | &nbsp; <a href="/about/contact/">Contact</a> &nbsp; | &nbsp; <a href="http://omiusajpic.livingstreets.com:8601/search-results/?cx=017409278450099449193%3Awfbtxpyrh6k&cof=FORID%3A11&ie=UTF-8&q=Search+our+site&siteurl=">Search</a>
+            </div>
+            <div style="padding-top:20px;">
+                <h1 style="font-size:28px;"><?php bloginfo('name'); ?></h1>
+            </div>
+            <div style="padding-top:0px;">
+                <h3 style="font-size:14px; font-style: italic;"><?php bloginfo('description'); ?></h3>
+            </div>
+        </div>
+        <div style="width:139px; float:right; color:#fff; padding:25px 10px 0 0;">
+            <img src="<?php bloginfo('template_directory') ?>/images/omi_logo_color.png" alt="OMI logo">
+        </div>
+    </div></a><!-- end #masthead -->
+<style>
+table#navbar {
+    width:100%;
+    background-color: #4281bf;
+    color: #fff;
+    font-size:18px;
+    height:45px;
+    border-top: 1px solid #fff;
+    border-bottom: 12px solid #0c1208;
+    /* Not sure why this is necessary but it avoids a border around the td cells */
+    border-collapse: collapse;
+}
+table#navbar td {
+    text-align: center;
+    border-right: 1px #fff solid;
+}
+table#navbar td:last-child {
+    border:0;
+}
+table#navbar td:hover {
+    background-color: #fff;
+    color: #4281bf;
+}
+</style>
+<table id="navbar"><tr>
+    <td>Home</td>
+    <td>About Us</td>
+    <td>Issue Areas</td>
+    <td>Our Impact</td>
+    <td>Get Involved</td>
+    <td>Resources</td>
+    <td>Partners</td>
+    <td>Support Us</td>
+</tr></table>

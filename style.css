@@ -30,15 +30,30 @@ body {
 /* SITEWIDE LINKS */
 a {
 	color: #2e64a0;
+	/* No, links should always be underlined
 	text-decoration: none;
+	*/
 }
 a:hover, a:visited:hover {
-	/*color: #57810c;*/
-	color: #506942;
+	text-decoration: none;
+	color: #4281bf;
 }
 a:visited {
 	color: #0b3869;
 }
+/* Masthead links */
+div#masthead a, div#masthead a:visited {
+	color: #fff;
+	font-size: 14px;
+}
+/*
+div#masthead a:hover, div#masthead a:visited:hover {
+*/
+/*
+div#masthead a:hover {
+	color: #ccc;
+}
+*/
 
 /* UTILITY STYLES */
 .clearboth {
@@ -83,12 +98,17 @@ ul.inlinelist li.last:after {
 
 /* HEADER STYLES */
 #masthead {
-	height: 119px;
-	background: url(images/masthead.jpg) bottom center no-repeat #506942;
+	height: 145px;
+	/*
+	background: url(images/masthead.jpg) bottom center no-repeat #4281bf;
+	*/
+	background: #4281bf;
+	/* Moved to table#navbar
 	border-bottom: 12px solid #0c1208;
+	*/
 }
 .spanish #masthead {
-	background: url(images/masthead_spanish.jpg) bottom center no-repeat #506942;
+	background: url(images/masthead_spanish.jpg) bottom center no-repeat #4281bf;
 }
 #masthead:hover {
 	cursor: pointer;
@@ -128,7 +148,7 @@ ul#leftnav li {
 }
 ul#leftnav li a:link, ul#leftnav li a:visited {
 	display: block;
-	background-color: #506942;
+	background-color: #4281bf;
 	padding: 16px 12px 8px 12px;
 	color: white;
 	font-size: 17px;
@@ -136,7 +156,7 @@ ul#leftnav li a:link, ul#leftnav li a:visited {
 	font-weight: bold;
 }
 ul#leftnav li a.open {
-	background: #506942 url(images/icon_tiny_down_arrow2.gif) right no-repeat;
+	background: #4281bf url(images/icon_tiny_down_arrow2.gif) right no-repeat;
 }
 ul#leftnav li a:hover {
 	background: #788a6e url(images/icon_tiny_down_arrow3.gif) right no-repeat;
@@ -151,7 +171,7 @@ ul#leftnav li ul {
 ul#leftnav li li {
 	/*padding: 2px 2px 2px 16px;*/
 	border: 0;
-	color: #506942;
+	color: #4281bf;
 }
 ul#leftnav li li a:link, ul#leftnav li li a:visited {
 	/*background: none;*/
@@ -159,7 +179,7 @@ ul#leftnav li li a:link, ul#leftnav li li a:visited {
 	font-size: 14px; 
 	text-transform: none; 
 	padding: 5px 16px 2px 16px;
-	color: #506942;
+	color: #4281bf;
 	border-bottom: 2px solid #b8c2b2;
 	background: url(images/icon_tiny_arrow_ltgreen3.png) left no-repeat;
 }
@@ -246,7 +266,7 @@ ul#leftnav li li li li li a:link, ul#leftnav li li li li li a:visited {
 	color: #333;
 }
 ul#leftnav li li li li li a:hover {
-	color: #506942;
+	color: #4281bf;
 	text-decoration: underline;
 }
 /* sixth level links (just in case) */
@@ -261,7 +281,7 @@ ul#leftnav li li li li li li a:link, ul#leftnav li li li li li li a:visited {
 	color: #333;
 }
 ul#leftnav li li li li li a:hover {
-	color: #506942;
+	color: #4281bf;
 	text-decoration: underline;
 }
 /* forms in left bar */
@@ -313,7 +333,7 @@ ul#leftnav li li li li li a:hover {
 	margin: 0;
 	padding: 5px 0 0 0;
 	.padding: 1px 0 0 0;
-	color: #506942;
+	color: #4281bf;
 	clear: both;
 }
 #leftsignup a:hover {
@@ -363,7 +383,9 @@ ul {
 h1 {
 	padding: 0;
 	margin: 0 0 6px 0;
+	/* Don't make all H1's sitewide near-black
 	color: #35462c;
+	*/
 	font-size: 24px;
 	font-weight: normal;
 	line-height: 1;
@@ -372,7 +394,9 @@ h2 {
 	margin: 8px 0 6px 0;
 	padding: 0;
 	font-size: 18px;
+	/* Don't make all H1's sitewide near-black
 	color: #485243;
+	*/
 	font-weight: normal;
 	line-height: 1;
 	border: none;
@@ -381,7 +405,9 @@ h3 {
 	margin: 8px 0 6px 0;
 	padding: 0;
 	font-size: 14px;
+	/* Don't make all H1's sitewide near-black
 	color: #485243;
+	*/
 	font-weight: bold;
 	line-height: 1;
 	border: none;
@@ -390,7 +416,9 @@ h4 {
 	margin: 8px 0 5px 0;
 	padding: 0;
 	font-size: 13px;
+	/* Don't make all H1's sitewide near-black
 	color: #485243;
+	*/
 	font-weight: bold;
 	line-height: 1;
 }
@@ -456,13 +484,13 @@ a.blacklink:hover, a.darkgraylink:hover, ul.blacklink a:hover {
 	font-size: 18px;
 	line-height: 18px;
 	font-weight: bold;
-	color: #506942;
+	color: #4281bf;
 	background: url(images/bg_greenwhite_gradient.gif) bottom repeat-x;
 	padding: 12px 12px 10px 12px;
 	_width: 743px;
 }
 #topbreadcrumb a:link, #topbreadcrumb a:visited {
-	color: #506942;
+	color: #4281bf;
 }
 #topbreadcrumb a:hover {
 	text-decoration: underline;
@@ -618,7 +646,7 @@ h2.newsheadline {
 /* FOOTER */
 #footer {
 	clear: both;
-	background: #506942;
+	background: #4281bf;
 	margin: 0;
 	padding: 12px 12px 6px 12px;
 	color: #fff;
@@ -676,7 +704,7 @@ form.wpcf7-form label {
 }
 .wpcf7-mail-sent-ok {
 	font-weight: bold;
-	color: #506942;
+	color: #4281bf;
 }
 .wpcf7-validation-errors {
 	font-weight: bold;
@@ -702,4 +730,9 @@ span.wpaudio-container {
 	display: inline; 
 }
 #leftsignup .connect {
+}
+
+/* DEVELOPMENT STYLES */
+.redoutline {
+	border:1px #f00 solid;
 }
