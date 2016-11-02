@@ -3,10 +3,15 @@
 Template Name: Homepage
 */
 get_header();
+// Hardcode hero images temporarily
+$hero_images = ["hero_screenshot_cherryblossoms.jpg", "hero_screenshot_offices.jpg", "hero_screenshot_library.jpg", "hero_screenshot_whitehouse.jpg", "hero_screenshot_pope.jpg", "hero_screenshot_group1.jpg", "hero_screenshot_largegroup.jpg"];
+$random_number = rand(1, count($hero_images));
+$random_hero = $hero_images[$random_number - 1];
+$hero_url = get_template_directory_uri() . '/images/' . $random_hero;
 ?>
 
 <div>
-	<img src="<?php bloginfo('template_directory') ?>/images/hero_screenshot_for_placement.jpg" >
+	<img src="<?php echo $hero_url; ?>">
 </div>
 
 <?php
