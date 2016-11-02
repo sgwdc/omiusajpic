@@ -41,19 +41,11 @@ a:hover, a:visited:hover {
 a:visited {
 	color: #0b3869;
 }
-/* Masthead links */
-div#masthead a, div#masthead a:visited {
-	color: #fff;
+/* MASTHEAD */
+div#masthead a {
 	font-size: 14px;
+	color: #fff;
 }
-/*
-div#masthead a:hover, div#masthead a:visited:hover {
-*/
-/*
-div#masthead a:hover {
-	color: #ccc;
-}
-*/
 
 /* UTILITY STYLES */
 .clearboth {
