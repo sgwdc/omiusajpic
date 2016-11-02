@@ -128,10 +128,8 @@ if (($post->post_password == '' && !$_COOKIE['wp-postpass_' . COOKIEHASH])) :
 <?php endif; ?>
 <!-- End comments -->
 
-/* end remove  
-?>
+end remove */
 
-<?php 
 /* If we're viewing the MEMBERS news category */
 elseif (is_category(6) || $_COOKIE['wp-postpass_' . COOKIEHASH]) : 
 ?>
