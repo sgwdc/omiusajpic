@@ -64,7 +64,7 @@
 				<div style="padding-top:10px;">
 					<a href="/">Home</a> &nbsp; | &nbsp; <a href="/about/contact/">Contact</a> &nbsp; | &nbsp; <a href="/search-results/">Search</a>
 				</div>
-				<div style="padding-top:25px;">
+				<div style="padding-top:20px;">
 					<h1 style="font-size:28px;">Justice, Peace, and Integrity of Creation</h1>
 				</div>
 				<div style="padding-top:0px;">
