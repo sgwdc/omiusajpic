@@ -57,10 +57,10 @@
 				<div style="padding-top:20px;">
 					<h1 style="font-size:28px;">Justice, Peace, and Integrity of Creation</h1>
 				</div>
-				<div style="padding-top:0px;">
+				<div style="padding-top:10px;">
 					<h3 style="font-size:15px; font-style: italic;">A Ministry of Missionary Oblates of Mary Immaculate</h3>
 				</div>
-				<div>
+				<div style="padding-top:5px;">
 					<h3 style="font-size:12px; font-style: italic;">United States Province</h3>
 				</div>
 			</div>
