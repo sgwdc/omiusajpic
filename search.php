@@ -25,41 +25,19 @@ include 'navbar.php';
 
 	<!-- Interior contents mid-width container -->
 	<div class="interiorcontents">
-		<div id="leftsearch" class="leftform">
-			<form id="searchform" name="searchform" method="get" action="/search-results/">
-				<input type="hidden" name="cx" value="017409278450099449193:wfbtxpyrh6k" />
-				<input type="hidden" name="cof" value="FORID:11" />
-				<input type="hidden" name="ie" value="UTF-8" />
-				<h4><label><?php if ($newspage || !(is_page_template('spanish.php')||is_category(206)||in_category(206))) : ?>Search<?php else : ?>Buscar<?php endif; ?></label></h4>
-				<input type="text" name="q" class="lefttextinput"<?php if ($newspage || !(is_page_template('spanish.php')||is_category(206)||in_category(206))) : ?> value="Search our site" 
-				onfocus="if (this.value=='Search our site') this.value='';" onblur="if (this.value=='') this.value='Search our site';" <?php endif; ?> />
-				<input type="submit" value="<?php if ($newspage || !(is_page_template('spanish.php')||is_category(206)||in_category(206))) : ?>Go<?php else : ?>Ir<?php endif; ?>" class="leftsubmit" />
-			</form>
-			<!--<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&lang=en"></script>-->
-			<div class="clearboth"></div>
-		</div><!-- End div#leftsearch -->
-
-		<?php /* Probably not needed since the input field is now on the search results page
-		<p><strong>You searched for:</strong> <?php echo the_search_query(); ?></p>
-		*/ ?>
-
-		<!-- Display search results -->
-		<div id="cse-search-results"></div>
-		<script type="text/javascript">
-			var googleSearchIframeName = "cse-search-results";
-			var googleSearchFormName = "searchform";
-			var googleSearchFrameWidth = 700;
-			var googleSearchDomain = "www.google.com";
-			var googleSearchPath = "/cse";
+		<?php /* Google Custom Search (Created 11/2/2016, and owned by Google account: s@livingstreets.com) - See https://cse.google.com/cse/ */ ?>
+		<script>
+			(function() {
+				var cx = '005609722693116340484:x5z1u9nrdyk';
+				var gcse = document.createElement('script');
+				gcse.type = 'text/javascript';
+				gcse.async = true;
+				gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(gcse, s);
+			})();
 		</script>
-		<script type="text/javascript" src="http://www.google.com/afsonline/show_afs_search.js"></script>
-		<style>
-		/* Seems to not be necessary to override the external CSS:
-		.gs-webResult {
-		width:900px;
-		}
-		*/
-		</style>
+		<gcse:search></gcse:search>
 
 		<?php
 			/* Old version:
