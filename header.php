@@ -12,7 +12,6 @@
 	<style media="all" type="text/css">
 		@import url( <?php bloginfo('stylesheet_url'); ?> );
 	</style>
-	<script type="text/javascript" src="<?php bloginfo('url'); ?>/scripts/swfobject.js"></script>
 	<link rel="feed alternate" type="application/rss+xml"
 	href="<?php bloginfo_rss('rss_url') ?>" title="<?php bloginfo_rss('title') ?>">
 	<meta name="description" content="The Missionary Oblates of Mary Immaculate's Justice, Peace, and Integrity of Creation effort is a global initiative to promote justice, equality, peace, and a clean and sustainable environment for all." />
