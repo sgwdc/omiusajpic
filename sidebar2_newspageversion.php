@@ -15,7 +15,6 @@ if (strstr($page_uri,'/news')) $newspage = true;
 $news_cat = 90; 
 $posts_num = 4;
 $news_title = 'Recent News';
-$show_members_sidebar = 0;
 ?>
 
 <?php 
@@ -39,17 +38,8 @@ $show_members_sidebar = 0;
 	} elseif (is_page('global')) {
 		$news_cat = '4'; 
 		$news_title="News in Global";
-	// member news 
-	} elseif ((is_page('members')||$post->post_parent==10) && $_COOKIE['wp-postpass_' . COOKIEHASH]) {
-		$news_cat = '6'; 
-		$news_title="<small><a href='/?member_logout=1' style='text-align:right;'>Logout</a></small> Member News";
-	// member news in protected news item 
 	} 
 	
-	if($_COOKIE['wp-postpass_' . COOKIEHASH] && (!(is_page('members')||$post->post_parent==10))) {
-		$show_members_sidebar = 1;
-	}
-
 	// global sub sections 
 	if (is_page(39)||$post->post_parent==39) {
 		$news_cat = '15'; 
@@ -102,27 +92,6 @@ $show_members_sidebar = 0;
 
 <!-- News sidebar -->
     <div class="interiornews">
-    	
-
-        <?php /* special sidebar for logged in members only */ ?>
-        <?php if ($show_members_sidebar) : ?>
-        <?php $news_cat2 = '6'; 
-		$news_title2="<small><a href='/?member_logout=1' style='text-align:right;'>Logout</a></small> Member News"; ?>
-		<h4><?php echo $news_title2; ?></h4>
-        <ul>
-        <?php
-		// Get homepage posts 
-		 $lastposts = get_posts('numberposts='.$posts_num.'&category='.$news_cat2);
-		 foreach($lastposts as $post) :
-			setup_postdata($post);
-		 ?>
-         <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <?php the_time('F jS, Y') ?></li>
-         <?php endforeach; ?>
-        </ul>
-        <?php endif; ?>
-        <?php /* end special sidebar */ ?>
-
-
         <h4><?php echo $news_title; ?></h4>
         <ul>
         <?php
@@ -160,8 +129,6 @@ $show_members_sidebar = 0;
         	<a href="/posts/actionalert">All Action Alerts &gt;</a>
         <?php elseif (is_page('resources')) : ?>
 			<a href="/posts/resources">More Resources &gt;</a>
-		<?php elseif ((is_page('members')) && $_COOKIE['wp-postpass_' . COOKIEHASH]) : ?>
-			<a href="/posts/members">More Member News &gt;</a>
         <?php else: ?>
         	<!--<a href="/news">More News &gt;</a>-->
 		<?php endif; ?>

@@ -71,11 +71,6 @@ echo $breadcrumb;
 <?php echo '<!-- Hide spanish from non-spanish page '; ?>
 <?php endif; ?>
 
-<?php 
-/* Make sure the post isn't password protected */ 
-if (($post->post_password == '' && !$_COOKIE['wp-postpass_' . COOKIEHASH])) : 
-?>
-
 	<?php // News page 
 	if (is_page() && $post->post_parent == 0) $top_level_landing = true;
 	else $top_level_landing = false;
@@ -104,39 +99,6 @@ if (($post->post_password == '' && !$_COOKIE['wp-postpass_' . COOKIEHASH])) :
 	if (!$newspage && (is_page_template('spanish.php')||is_category(206)||in_category(206))) the_content('<p><strong>Leer el resto del art&iacute;culo &raquo;</strong></p>'); 
 	else the_content('<p><strong>Click here to read more &raquo;</strong></p>'); 
 	// Leer el resto del artículo
-?>
-
-<?php
-/* If we're viewing the MEMBERS news category */
-elseif (is_category(6) || $_COOKIE['wp-postpass_' . COOKIEHASH]) : 
-?>
-	<?php if (is_page()) : ?>
-		<?php if ($post->post_parent != 0) : ?>
-		<h1 class="newsheadline"><a href="<?php the_permalink(); ?>" class="blacklink"><?php the_title(); ?></a></h1>
-		<?php endif; ?>
-	<?php elseif (is_single()) : ?>
-		<h1 class="newsheadline"><a href="<?php the_permalink(); ?>" class="blacklink"><?php the_title(); ?></a>
-		<span class="newslistdate"><?php the_time('F jS, Y') ?></span></h1>
-	<?php else : ?>
-		<br />
-		<h2 class="newsheadline"><a href="<?php the_permalink(); ?>" class="blacklink"><?php the_title(); ?></a>
-		<span class="newslistdate"><?php the_time('F jS, Y') ?></span></h2>
-	<?php endif; ?>
-	<?php the_content('<p><strong>Click here to read more &raquo;</strong></p>'); ?>
-
-<?php 
-/* Otherwise, we're just showing a password-protected page or post */
-elseif (is_page() || is_single()) : 
-	?>
-	<?php if (!$top_level_landing) : ?><h1><?php the_title(); ?></h1><?php endif; ?>
-	<?php if(!is_page()) : ?>
-		<p class="gray"><span><strong><?php the_time('F jS, Y') ?></strong></span></p>
-	<?php endif; ?>
-	<?php the_content('<p><strong>Click here to read more &raquo;</strong></p>'); ?>
-	<!-- removed -->
-<?php 
-/* End if not password protected */
-endif; 
 ?>
 
 <?php if (!is_page() and is_single()) : ?>

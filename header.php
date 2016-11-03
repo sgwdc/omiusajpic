@@ -1,11 +1,3 @@
-<?php 
-	/* Password Protected Page Logout 
-	This code allows people to log out of the members area, by linking to the homepage like this: 
-	<a href="/?member_logout=1">Logout</a> */
-	function member_logout() { $cookie_result = setcookie('wp-postpass_' . COOKIEHASH, '' , time() - 3600, COOKIEPATH); }
-	if ($_REQUEST['member_logout']==1) member_logout(); 
-?>
-
 <!DOCTYPE html>
 <head>
 	<meta charset="UTF-8">
