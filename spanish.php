@@ -6,8 +6,6 @@ Template Name: Spanish
 
 <?php get_header(); ?>
 
-<?php // Not included in v2.0 of OMI JPIC theme: get_sidebar(); ?>
-
 	<!-- MAIN SECTION -->
     <div class="maininterior">
     <a name="maincontent"></a>
@@ -95,9 +93,8 @@ Template Name: Spanish
 		<p style="text-align:center;clear:both;"><a href="#maincontent" class="small">arriba</a></p>
     </div>
     
-    <?php include (TEMPLATEPATH . '/sidebar2.php'); ?>
- 
+    <?php include (TEMPLATEPATH . '/sidebar2_newspageversion.php'); ?>
 
-	</div><!-- end #main -->
+	</div><!-- end #maininterior -->
     
 <?php get_footer(); ?>

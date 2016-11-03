@@ -5,10 +5,6 @@
 	include 'navbar.php';
 ?>
 
-<?php /* Not included in v2.0 of OMI JPIC theme:
-	get_sidebar();
-*/ ?>
-
 <!-- MAIN SECTION -->
 <div class="maininterior">
 
@@ -25,7 +21,7 @@
 		free to <a href="/about/contact">contact us</a> regarding this error.</p>
 	</div>
 
-	<?php include (TEMPLATEPATH . '/sidebar2.php'); ?>
-</div><!-- end #main -->
+	<?php include (TEMPLATEPATH . '/sidebar2_newspageversion.php'); ?>
+</div><!-- end #maininterior -->
 
 <?php get_footer(); ?>

@@ -19,11 +19,6 @@ $hero_url = get_template_directory_uri() . '/images/' . $random_hero;
 	include 'navbar.php';
 ?>
 
-<?php
-/* Not included in v2.0 of OMI JPIC theme:
-	get_sidebar();
-*/ ?>
-
 <!-- MAIN SECTION -->
 <div class="mainhome">
 
@@ -78,7 +73,7 @@ $hero_url = get_template_directory_uri() . '/images/' . $random_hero;
 <div class="column" id="homepageright">
 	<a class="twitter-timeline" href="https://twitter.com/omiusaJPIC" data-widget-id="682618667486556160">Tweets by @omiusaJPIC</a>
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-</div><!-- end #main -->
+</div><!-- end #mainhome -->
 
 <div class="clearboth"></div>
 <br>

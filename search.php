@@ -11,10 +11,6 @@ Template Name: Search template
 include 'navbar.php';
 ?>
 
-<?php /* Not included in v2.0 of OMI JPIC theme:
-	get_sidebar();
-*/ ?>
-
 <!-- MAIN SECTION -->
 <div class="maininterior">
 
@@ -60,8 +56,6 @@ include 'navbar.php';
 		endif; ?>
 
 	</div><!-- End div#interiorcontents -->
-
-	<?php // include (TEMPLATEPATH . '/sidebar2.php'); ?>
 
 	<?php include (TEMPLATEPATH . '/sidebar2_newspageversion.php'); ?>
 

@@ -19,10 +19,6 @@ if (strstr($page_uri,'/news')) $newspage = true;
 	include 'navbar.php';
 ?>
 
-<?php /* Not included in v2.0 of OMI JPIC theme:
-	get_sidebar();
-*/ ?>
-
 <!-- MAIN SECTION -->
 <div class="maininterior">
 <a name="maincontent"></a>
@@ -110,26 +106,7 @@ if (($post->post_password == '' && !$_COOKIE['wp-postpass_' . COOKIEHASH])) :
 	// Leer el resto del artículo
 ?>
 
-<?php /* start remove 
-<?php if (!is_page() and is_single()) : ?>
-<div class="singlepagebottom">
-<p><strong>Posted in:</strong> <?php the_category(', ') ?></p>
-<p><?php the_tags('<strong>Related keywords:</strong> ', ', ', ''); ?></p>
-</div>
-<?php endif; ?>
-<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
-<?php edit_post_link('Edit', '<p align="center"><b>[ ', ' ]</b></p>'); ?>
-<?php if (is_page_template('spanish.php')||is_category(206)) : ?><br /><br /><br /><br /><br /><br /><br />
-<br /><br /><br /><br /><br /><br /><br /><br /><?php endif; ?>
-
-<!-- Comments if applicable -->
-<?php if ((is_page() || is_single()) && ('open' == $post-> comment_status)) : ?>	
-<?php comments_template(); ?>
-<?php endif; ?>
-<!-- End comments -->
-
-end remove */
-
+<?php
 /* If we're viewing the MEMBERS news category */
 elseif (is_category(6) || $_COOKIE['wp-postpass_' . COOKIEHASH]) : 
 ?>
@@ -162,7 +139,6 @@ elseif (is_page() || is_single()) :
 endif; 
 ?>
 
-
 <?php if (!is_page() and is_single()) : ?>
 	<div class="singlepagebottom">
 		<?php if ($newspage || !(is_page_template('spanish.php')||is_category(206)||in_category(206))) : ?><p><strong>Posted in:</strong> <?php the_category(', ') ?></p><?php endif; ?>
@@ -186,7 +162,6 @@ endif;
 
 <?php endwhile; endif; ?>
 
-
 <div class="navigation">
 	<div class="alignleft"><?php if (!$newspage && (is_page_template('spanish.php')||is_category(206)||in_category(206))) : ?>
 		<?php next_posts_link('&laquo; Informaci&oacute;n anterior') ?>
@@ -207,7 +182,6 @@ endif;
 
 <?php include (TEMPLATEPATH . '/sidebar2_newspageversion.php'); ?>
 
-
-</div><!-- end #main -->
+</div><!-- end #maininterior -->
 
 <?php get_footer(); ?>
