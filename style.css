@@ -740,6 +740,10 @@ span.wpaudio-container {
 .redoutline {
 	border:1px #f00 solid;
 }
+/* Fix CSS conflict between "Show Current Template" plugin and WordPress Toolbar (Admin bar) */
+#wpadminbar .quicklinks .menupop ul li {
+	float:left !important;
+}
 /* AddThis */
 div.addthis_toolbox {
 	padding:20px 0;
