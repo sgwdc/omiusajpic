@@ -1,7 +1,7 @@
 		<!-- FOOTER -->
 		<div id="footer">
 			<ul>
-				<li><a href="/">Home</a></li>
+				<li><a href="/">Homepage</a></li>
 				<li><a href="/about/">About Us</a></li>
 				<li><a href="/issues/">Issues</a></li>
 				<li><a href="/our-impact/">Our Impact</a></li>
