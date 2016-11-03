@@ -6,6 +6,11 @@ Template Name: Spanish
 
 <?php get_header(); ?>
 
+<?php
+    // Include the horizontal navbar
+    include 'navbar.php';
+?>
+
 	<!-- MAIN SECTION -->
     <div class="maininterior">
     <a name="maincontent"></a>
