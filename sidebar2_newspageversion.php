@@ -39,54 +39,7 @@ $news_title = 'Recent News';
 		$news_cat = '4'; 
 		$news_title="News in Global";
 	} 
-	
-	// global sub sections 
-	if (is_page(39)||$post->post_parent==39) {
-		$news_cat = '15'; 
-		$news_title="Africa News";
-
-	} elseif (is_page(40)||$post->post_parent==40) {
-		$news_cat = '16'; 
-		$news_title="Asia &amp; Pacific News";
-
-	} elseif (is_page(41)||$post->post_parent==41) {
-		$news_cat = '8'; 
-		$news_title="North America News";
-
-	} elseif (is_page(38)||$post->post_parent==38) {
-		$news_cat = '12'; 
-		$news_title="Latin America &amp; Carribean News";
-
-	} elseif (is_page(42)||$post->post_parent==42) {
-		$news_cat = '20'; 
-		$news_title="Europe News";
-
-	} elseif (is_page(194)||$post->post_parent==194) {
-		$news_cat = '14'; 
-		$news_title="United Nations News";
-	} 
-
-	// issues subsections
-	if (is_page(21)||$post->post_parent==21) {
-		$news_cat = '11'; 
-		$news_title="Social Justice News";
-	} elseif (is_page(46)||$post->post_parent==46) {
-		$news_cat = '19'; 
-		$news_title="Economic Justice News";
-	} elseif (is_page(19)||$post->post_parent==19) {
-		$news_cat = '18'; 
-		$news_title="Ecology News";
-	} elseif (is_page(20)||$post->post_parent==20) {
-		$news_cat = '21'; 
-		$news_title="Faith Responsible Investing News";
-	} elseif (is_page(47)||$post->post_parent==47) {
-		$news_cat = '9'; 
-		$news_title="Peace Movement News";
-	} 
-
 ?>
-
-
 
 <?php if(is_single() || !is_page()) $posts_num = 3; ?>
 
