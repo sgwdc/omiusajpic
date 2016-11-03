@@ -20,7 +20,7 @@ if (strstr($page_uri,'/news')) $newspage = true;
 ?>
 
 <!-- MAIN SECTION -->
-<div class="maininterior">
+<div id="main" class="maininterior">
 <a name="maincontent"></a>
 
 <!-- Breadcrumb -->

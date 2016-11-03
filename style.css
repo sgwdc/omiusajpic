@@ -342,7 +342,13 @@ span.wpaudio-container {
 #wpadminbar .quicklinks .menupop ul li {
 	float:left !important;
 }
-/* AddThis */
+/* AddThis social media */
 div.addthis_toolbox {
 	padding:20px 0;
+}
+/* Reincorporated from old design */
+#main.maininterior ul li {
+	margin: 2px 0 2px 2px;
+	padding: 3px 5px 3px 10px;
+	background: url(images/bluesquare_bullet.png) top left no-repeat;
 }
