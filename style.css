@@ -27,6 +27,11 @@ body {
 	background: url(images/bg_pageshadow.gif) repeat-y bottom center;
 	padding: 0 6px 0 6px;
 }
+div#bottom-dropshadow {
+	width: 988px;
+	margin: 0 auto;
+	background: url(images/bottom_dropshadow.png) no-repeat;
+}
 
 /* SITEWIDE LINKS */
 a {

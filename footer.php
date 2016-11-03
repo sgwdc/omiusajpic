@@ -17,6 +17,8 @@
 			<?php wp_footer(); ?>
 		</div><!-- end #footer -->
 	</div><!-- end #container -->
+	<!-- Dropshadow -->
+	<div id="bottom-dropshadow">&nbsp;</div>
 
 	<?php
 	$IPsToIgnore = ["73.212.168.134", "10.19.76.1", "104.129.81.54"];
@@ -47,5 +49,6 @@
 	<?php
 	}
 	?>
+	<br><br>
 </body>
 </html>
