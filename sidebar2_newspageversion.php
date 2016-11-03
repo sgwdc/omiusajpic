@@ -191,7 +191,7 @@ $show_members_sidebar = 0;
 		 <?php endif; ?></li>
          <?php endforeach; ?>
         </ul>
-        <?php if ($showing_videos) : ?><a href="http://omiusajpic.org/resources/video/">More video &amp; audio &gt;</a><?php endif; ?>
+        <?php if ($showing_videos) : ?><a href="/resources/video/">More video &amp; audio &gt;</a><?php endif; ?>
         <!-- end video/audio sidebar -->
         
 
