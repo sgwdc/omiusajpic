@@ -23,6 +23,7 @@ body {
 	margin: 0 auto 0 auto;
 	width: 980px;
 	text-align: left;
+	/* Dropshadow on the left and right sides of every page */
 	background: url(images/bg_pageshadow.gif) repeat-y bottom center;
 	padding: 0 6px 0 6px;
 }
@@ -175,7 +176,7 @@ a.blacklink:hover, a.darkgraylink:hover, ul.blacklink a:hover {
 	line-height: 18px;
 	font-weight: bold;
 	color: #4281bf;
-	background: url(images/bg_greenwhite_gradient.gif) bottom repeat-x;
+	background: url(images/breadcrumb_gradient.png) bottom repeat-x;
 	padding: 12px 12px 10px 12px;
 	_width: 743px;
 }
