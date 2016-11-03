@@ -93,7 +93,7 @@ Template Name: Spanish
 		<p style="text-align:center;clear:both;"><a href="#maincontent" class="small">arriba</a></p>
     </div>
     
-    <?php include (TEMPLATEPATH . '/sidebar2_newspageversion.php'); ?>
+    <?php include get_template_directory() . '/sidebar2_newspageversion.php'; ?>
 
 	</div><!-- end #maininterior -->
     

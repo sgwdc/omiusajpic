@@ -21,7 +21,7 @@
 		free to <a href="/about/contact">contact us</a> regarding this error.</p>
 	</div>
 
-	<?php include (TEMPLATEPATH . '/sidebar2_newspageversion.php'); ?>
+	<?php include get_template_directory() . '/sidebar2_newspageversion.php'; ?>
 </div><!-- end #maininterior -->
 
 <?php get_footer(); ?>

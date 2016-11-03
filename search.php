@@ -57,7 +57,7 @@ include 'navbar.php';
 
 	</div><!-- End div#interiorcontents -->
 
-	<?php include (TEMPLATEPATH . '/sidebar2_newspageversion.php'); ?>
+	<?php include get_template_directory() . '/sidebar2_newspageversion.php'; ?>
 
 </div><!-- End #maininterior -->
 
