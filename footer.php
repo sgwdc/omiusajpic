@@ -3,7 +3,7 @@
 			<ul>
 				<li><a href="/">Home</a></li>
 				<li><a href="/about/">About Us</a></li>
-				<li><a href="/issues/">Issue Areas</a></li>
+				<li><a href="/issues/">Issues</a></li>
 				<li><a href="/our-impact/">Our Impact</a></li>
 				<li><a href="/action/">Get Involved</a></li>
 				<li><a href="/resources/">Resources</a></li>

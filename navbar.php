@@ -58,7 +58,7 @@
 <table id="navbar"><tr>
 	<td id="home_icon"<?php if($highest_page_slug =="home") echo ' class="current"'; ?>><a href="/"> &nbsp; &nbsp; &nbsp; &nbsp; </a></td>
 	<td<?php if($highest_page_slug =="about") echo ' class="current"'; ?>><a href="/about/">About Us</a></td>
-	<td<?php if($highest_page_slug =="issues") echo ' class="current"'; ?>><a href="/issues/">Issue Areas</a></td>
+	<td<?php if($highest_page_slug =="issues") echo ' class="current"'; ?>><a href="/issues/">Issues</a></td>
 	<td<?php if($highest_page_slug =="our-impact") echo ' class="current"'; ?>><a href="/our-impact/">Our Impact</a></td>
 	<td<?php if($highest_page_slug =="action") echo ' class="current"'; ?>><a href="/action/">Get Involved</a></td>
 	<td<?php if($highest_page_slug =="resources") echo ' class="current"'; ?>><a href="/resources/">Resources</a></td>
