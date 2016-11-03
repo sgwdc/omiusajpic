@@ -6,11 +6,9 @@
 	if ($_REQUEST['member_logout']==1) member_logout(); 
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
 <head>
-	<?php /* if (in_category(206)) echo '<!--- Category 206 --->'; else echo '<!--- no category info --->'; */ ?>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset="UTF-8">
 	<title><?php
 	// If this is NOT the front page, include the page title in the HTML title
 	if (!is_front_page()) {
