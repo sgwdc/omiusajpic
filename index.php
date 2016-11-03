@@ -150,12 +150,6 @@ endif;
 <?php /* Hide the stray edit post link? */ ?>
 <?php edit_post_link('Edit', '<p align="center"><b>[ ', ' ]</b></p>'); ?>
 
-<?php /*<!-- Comments if applicable -->*/ ?>
-<?php if ((is_page() || is_single()) && ('open' == $post-> comment_status)) : ?>	
-	<?php comments_template(); ?>
-<?php endif; ?>
-<?php /*<!-- End comments -->   */ ?>
-
 <?php if (in_category(206) && !is_category(206) && !is_single()) : ?>
 	<?php echo 'End hide spanish from non-spanish page --->'; ?>
 <?php endif; ?>

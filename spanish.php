@@ -76,12 +76,6 @@ Template Name: Spanish
 	<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
     <?php edit_post_link('Edit', '<p align="center"><b>[ ', ' ]</b></p>'); ?>
 
-		<!-- Comments if applicable -->
-        <?php if ((is_page() || is_single()) && ('open' == $post-> comment_status)) : ?>	
-            <?php comments_template(); ?>
-        <?php endif; ?>
-    	<!-- End comments -->
-        
 	<?php endwhile; endif; ?>
 
         <div class="navigation">

@@ -322,10 +322,6 @@ form.wpcf7-form label {
 	font-weight: bold;
 	color: #8F1111;
 }
-
-ol.commentlist cite {
-	text-transform: capitalize;
-}
 /* WPAudio plugin (still used?) */
 img.wpaudio-play {
 	display: inline;
