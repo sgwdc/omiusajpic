@@ -56,6 +56,8 @@ $hero_url = get_template_directory_uri() . '/images/' . $random_hero;
 					// Strip shortcodes
 					$shortcode_pattern= '/\[(\/?caption.*?(?=\]))\]/';
 					$thecontent = preg_replace($shortcode_pattern, '', $thecontent);
+					// Remove multiple spaces
+					$thecontent = preg_replace('/\s+/', ' ', $thecontent);
 					// Take only the first 255 characters, and trim whitespace
 					$thecontent = ltrim(rtrim(substr($thecontent, 0, 255))) . "...";
 					echo $thecontent . '<br><a href="' . get_the_permalink() . '">Read more &gt;</a>';
