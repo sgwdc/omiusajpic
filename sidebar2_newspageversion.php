@@ -119,7 +119,7 @@ $news_title = 'Recent News';
         <h4>News Archives</h4>
         <!--<ul><?php wp_get_archives('type=monthly'); ?></ul>-->
         <select name="archive-dropdown" onChange='document.location.href=this.options[this.selectedIndex].value;'>
-        <option value=""><?php echo attribute_escape(__('Select Month')); ?></option>
+        <option value=""><?php echo esc_attr(__('Select Month')); ?></option>
         <?php wp_get_archives('type=monthly&format=option'); ?> </select> <br />
         <?php endif; ?>
         

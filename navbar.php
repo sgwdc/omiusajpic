@@ -42,6 +42,7 @@
 </style>
 <?php
 	//$slug = $post -> post_name;
+	$highest_page_slug = "";
 	// Is it a page
 	if(is_page()) { 
 		global $post;

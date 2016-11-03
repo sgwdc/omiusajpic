@@ -28,7 +28,7 @@ if (strstr($page_uri,'/news')) $newspage = true;
 <?php 
 // Breadcrumb 
 $breadcrumb = '';
-if (is_page && $post->post_parent != 0) { 
+if (is_page() && $post->post_parent != 0) { 
 	$breadcrumb = '';
 	$bcn_parent_id = $post->post_parent;
 	while(is_numeric($bcn_parent_id) && $bcn_parent_id != 0) {
@@ -39,7 +39,6 @@ if (is_page && $post->post_parent != 0) {
 			$breadcrumb = '<a href="' . get_permalink($bcn_parent_id).'">' . $bcn_parent->post_title . '</a>: ' . $breadcrumb;
 		} 
 		$bcn_parent_id = $bcn_parent->post_parent;
-		$lev_count++;
 	}
 } elseif (is_page()) {
 	$breadcrumb = '<a href="' . $post->permalink .'" class="open">' . $post->post_title . '</a>'; 
