@@ -70,7 +70,23 @@ $hero_url = get_template_directory_uri() . '/images/' . $random_hero;
 	</div>
 </div>
 
+<style>
+	div#social-media {
+		padding:0 10px;
+	}
+	div#social-media img {
+		display:inline;
+		padding-right: 10px;
+	}
+</style>
+
 <div class="column" id="homepageright">
+	<div id="social-media" style="">
+		<a href="https://twitter.com/omiusajpic" title="OMI Justice, Peace, and Integrity of Creation Twitter" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/twitter-bird-white-on-blue_32.png" alt="Twitter" /></a>
+		<a href="https://www.facebook.com/omiusajpic" title="OMI Justice, Peace, and Integrity of Creation Facebook" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/f_logo_32.png" alt="Facebook" /></a>
+		<a href="http://www.youtube.com/OMIJPIC" title="OMI Justice, Peace, and Integrity of Creation YouTube Channel" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/youtube_32.png" alt="YouTube" /></a>
+		<a href="/email-list/" title="Email list"><img src="<?php bloginfo('template_directory'); ?>/images/email_list.png" alt="Email list" /></a>
+	</div>
 	<a class="twitter-timeline" href="https://twitter.com/omiusaJPIC" data-widget-id="682618667486556160">Tweets by @omiusaJPIC</a>
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </div><!-- end #mainhome -->
