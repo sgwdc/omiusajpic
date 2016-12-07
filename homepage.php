@@ -39,7 +39,7 @@ $hero_url = get_template_directory_uri() . '/images/' . $random_hero;
 			foreach($lastposts as $post) :
 				setup_postdata($post);
 				?>
-				<p>
+				<p class="clearfix">
 				<a href="<?php the_permalink(); ?>" class="big"><?php the_title(); ?></a><br>
 				<?php
 					// If a "Featured Image" exists for this post, display it
@@ -63,7 +63,6 @@ $hero_url = get_template_directory_uri() . '/images/' . $random_hero;
 					echo $thecontent . '<br><a href="' . get_the_permalink() . '">Read more &gt;</a>';
 				?>
 				</p>
-				<div class="clearboth"></div>
 				<br>
 			<?php endforeach; ?>
 
@@ -93,7 +92,6 @@ $hero_url = get_template_directory_uri() . '/images/' . $random_hero;
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </div><!-- end #mainhome -->
 
-<div class="clearboth"></div>
 <br>
 <br>
 

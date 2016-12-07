@@ -17,6 +17,7 @@
 	<meta name="description" content="The Missionary Oblates of Mary Immaculate's Justice, Peace, and Integrity of Creation effort is a global initiative to promote justice, equality, peace, and a clean and sustainable environment for all." />
 	<!--[if IE]><link rel="shortcut icon" href="<?php bloginfo('template_directory') ?>/images/favicon.ico"><![endif]-->
 	<link rel="icon" href="<?php bloginfo('template_directory') ?>/images/favicon.png">
+	<!-- Hook for plugins to insert code here (Avoids need to move WordPress Toolbar to the bottom of the browser window) -->
 	<?php wp_head(); ?>
 </head>
 
@@ -34,7 +35,6 @@
 
 		<!-- HEADER -->
 		<div id="topnav">
-			<a href="#maincontent" class="hidden">Skip to main content</a>
 			<?php if ($newspage || !is_home()) : ?>
 			<a href="<?php bloginfo('url'); ?>">Home</a> | 
 			<?php endif; ?>

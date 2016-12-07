@@ -50,16 +50,13 @@ div#masthead a {
 	color: #fff;
 }
 
-/* UTILITY STYLES */
-.clearboth {
-	clear: both;
-}
-.clear10px {
-	height: 10px;
-	clear: both;
-}
-.hidden {
-	display: none;
+/* For clearing floats */
+.clearfix:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
 }
 ul.inlinelist, ul.inlinelist li, ul.inlinelist li a {
 	display: inline;
