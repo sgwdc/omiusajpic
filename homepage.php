@@ -24,7 +24,7 @@ $hero_url = get_template_directory_uri() . '/images/' . $random_hero;
 	Homepage
 </div>
 
-<div id="homepageleft">
+<div id="homepage-body">
 	<!-- News -->
 	<h3><a href="news" class="darkgraylink">Recent News &amp; Updates</a></h3>
 	<?php
@@ -63,7 +63,7 @@ $hero_url = get_template_directory_uri() . '/images/' . $random_hero;
 	<p><a href="/news/">See more news &amp; updates &gt;</a></p>
 </div>
 
-<div class="column">
+<div id="homepage-sidebar">
 	<div id="social-media">
 		<a href="https://twitter.com/omiusajpic" title="OMI Justice, Peace, and Integrity of Creation Twitter" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/twitter-bird-white-on-blue_32.png" alt="Twitter" /></a>
 		<a href="https://www.facebook.com/omiusajpic" title="OMI Justice, Peace, and Integrity of Creation Facebook" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/f_logo_32.png" alt="Facebook" /></a>

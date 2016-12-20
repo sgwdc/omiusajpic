@@ -150,7 +150,7 @@ a.darkgraylink, a.darkgraylink:link, a.darkgraylink:visited {
 a.blacklink:hover, a.darkgraylink:hover, ul.blacklink a:hover {
 	color: #2e64a0;
 }
-.column {
+#homepage-sidebar {
 	width: 376px;
 	float: left;
 	padding-top:20px;
@@ -206,14 +206,14 @@ div.interiornews a:link, div.interiornews a:visited {
 }
 
 /* homepage */
-#homepageleft {
+#homepage-body {
 	float:left;
 	padding:20px;
 	width: 540px;
 	_padding-right: 22px; /* IE6 */
 }
 
-#homepageleft h3 {
+#homepage-body h3 {
 	border-bottom: 3px solid #e3eedc;
 	padding: 5px 5px 6px 0;
 	margin: 0 20px 15px 0;
