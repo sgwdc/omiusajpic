@@ -220,6 +220,7 @@ div.homecontents h3 {
 }
 
 #homepageleft {
+	float:left;
 	padding-top: 18px;
 	padding-right: 25px;
 	width: 540px;
