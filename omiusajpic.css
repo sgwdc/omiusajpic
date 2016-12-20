@@ -85,11 +85,6 @@ ul.inlinelist li.last:after {
 	background: #4281bf;
 }
 
-/* CONTENTS */
-.homecontents {
-	padding: 0 0 20px 18px;
-}
-
 /* SITEWIDE BASIC STYLES */
 img {
 	border: none;
@@ -158,6 +153,7 @@ a.blacklink:hover, a.darkgraylink:hover, ul.blacklink a:hover {
 .column {
 	width: 376px;
 	float: left;
+	padding-top:20px;
 }
 #topbreadcrumb {
 	text-transform: uppercase;
@@ -210,21 +206,20 @@ div.interiornews a:link, div.interiornews a:visited {
 }
 
 /* homepage */
-div.homecontents h3 {
+#homepageleft {
+	float:left;
+	padding:20px;
+	width: 540px;
+	_padding-right: 22px; /* IE6 */
+}
+
+#homepageleft h3 {
 	border-bottom: 3px solid #e3eedc;
 	padding: 5px 5px 6px 0;
 	margin: 0 20px 15px 0;
 	font-size: 18px;
 	color: #485243;
 	font-weight: normal;
-}
-
-#homepageleft {
-	float:left;
-	padding-top: 18px;
-	padding-right: 25px;
-	width: 540px;
-	_padding-right: 22px; /* IE6 */
 }
 .singlepagebottom {
 	border-left: 2px solid #e3eedc;
