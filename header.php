@@ -1,3 +1,27 @@
+<?php
+	/* BLOCK ANY REQUESTS FROM GOOGLE TO DEV SERVER */
+	// If this is the local dev server
+	if ($_SERVER['SERVER_ADDR'] == "10.19.76.51") {
+		// Configuration
+		$HostnameDomainsToBlock = ["google.com"];
+		// Get the user's IP address
+		$ip = $_SERVER['REMOTE_ADDR'];
+		/* dev - for testing
+		$ip = "66.249.83.212"; // google.com
+		*/
+		$hostname = gethostbyaddr($ip);
+		foreach ($HostnameDomainsToBlock as $oneHostnameDomain) {
+			// If the current hostname ends with any of the domains to block above, make a note of it, and break the loop
+			if ($oneHostnameDomain == substr($hostname, strlen($hostname) - strlen($oneHostnameDomain))) {
+				// Snd an HTTP status code 404 (File Not Found)
+				header("HTTP/1.0 404 Not Found");
+				echo "File Not Found";
+				exit;
+			}
+		}
+	}
+?>
+
 <!DOCTYPE html>
 <head>
 	<meta charset="UTF-8">
