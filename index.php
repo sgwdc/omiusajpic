@@ -50,6 +50,8 @@ echo $breadcrumb;
 ?>
 </div> 
 
+<?php include get_template_directory() . '/sidebar2_newspageversion.php'; ?>
+
 <!-- Interior contents mid-width container -->
 <div id="interior-body">
 <?php $main_news_page = 0 ?>
@@ -134,8 +136,6 @@ echo $breadcrumb;
 
 <p style="text-align:center;clear:both;"><a href="#top" class="small"><?php if (!$newspage && (is_page_template('spanish.php')||is_category(206)||in_category(206))) : ?>arriba<?php else : ?>Return to Top<?php endif; ?></a></p>
 </div>
-
-<?php include get_template_directory() . '/sidebar2_newspageversion.php'; ?>
 
 </div><!-- end #maininterior -->
 

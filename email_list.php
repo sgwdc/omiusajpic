@@ -19,6 +19,8 @@ Template Name: Email List
 		Email List
 	</div>
 
+	<?php include get_template_directory() . '/sidebar2_newspageversion.php'; ?>
+
 	<!-- Interior contents mid-width container -->
 	<div id="interior-body">
 		<h1>Email List</h1>
@@ -59,8 +61,6 @@ Template Name: Email List
 		<a href="/action" class="actionalertlink">See current and past action alerts &gt;</a>
 
 	</div>
-
-	<?php include get_template_directory() . '/sidebar2_newspageversion.php'; ?>
 </div><!-- end #maininterior -->
 
 <?php get_footer(); ?>

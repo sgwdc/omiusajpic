@@ -19,6 +19,8 @@ include 'navbar.php';
 		Search Results
 	</div>
 
+	<?php include get_template_directory() . '/sidebar2_newspageversion.php'; ?>
+
 	<!-- Interior contents mid-width container -->
 	<div id="interior-body">
 		<?php /* Google Custom Search (Created 11/2/2016, and owned by Google account: s@livingstreets.com) - See https://cse.google.com/cse/ */ ?>
@@ -56,8 +58,6 @@ include 'navbar.php';
 		endif; ?>
 
 	</div><!-- End div#interior-body -->
-
-	<?php include get_template_directory() . '/sidebar2_newspageversion.php'; ?>
 
 </div><!-- End #maininterior -->
 

@@ -40,6 +40,8 @@ Template Name: Spanish
 		echo $breadcrumb;
 		?>
     </div> 
+
+    <?php include get_template_directory() . '/sidebar2_newspageversion.php'; ?>
     
     <!-- Interior contents mid-width container -->
     <div id="interior-body">
@@ -91,8 +93,6 @@ Template Name: Spanish
 		<p style="text-align:center;clear:both;"><a href="#top" class="small">arriba</a></p>
     </div>
     
-    <?php include get_template_directory() . '/sidebar2_newspageversion.php'; ?>
-
 	</div><!-- end #maininterior -->
     
 <?php get_footer(); ?>
