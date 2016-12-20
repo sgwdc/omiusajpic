@@ -51,7 +51,7 @@ echo $breadcrumb;
 </div> 
 
 <!-- Interior contents mid-width container -->
-<div class="interiorcontents">
+<div id="interior-body">
 <?php $main_news_page = 0 ?>
 
 <?php if (!is_single() && !is_page()) : ?>

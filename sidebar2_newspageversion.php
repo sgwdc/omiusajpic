@@ -44,7 +44,7 @@ $news_title = 'Recent News';
 <?php if(is_single() || !is_page()) $posts_num = 3; ?>
 
 <!-- News sidebar -->
-    <div class="interiornews">
+    <div id="interior-sidebar">
         <h4><?php echo $news_title; ?></h4>
         <ul>
         <?php

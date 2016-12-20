@@ -14,7 +14,7 @@
 	</div>
 
 	<!-- Interior contents mid-width container -->
-	<div class="interiorcontents">
+	<div id="interior-body">
 		<h1>Page Not Found</h1>
 
 		<p>You may wish to return to the <a href="/">homepage</a> to find what you're looking for. Please feel 

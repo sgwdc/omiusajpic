@@ -20,7 +20,7 @@ include 'navbar.php';
 	</div>
 
 	<!-- Interior contents mid-width container -->
-	<div class="interiorcontents">
+	<div id="interior-body">
 		<?php /* Google Custom Search (Created 11/2/2016, and owned by Google account: s@livingstreets.com) - See https://cse.google.com/cse/ */ ?>
 		<script>
 			(function() {
@@ -55,7 +55,7 @@ include 'navbar.php';
 		endwhile;
 		endif; ?>
 
-	</div><!-- End div#interiorcontents -->
+	</div><!-- End div#interior-body -->
 
 	<?php include get_template_directory() . '/sidebar2_newspageversion.php'; ?>
 

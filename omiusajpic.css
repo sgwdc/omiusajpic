@@ -171,12 +171,12 @@ a.blacklink:hover, a.darkgraylink:hover, ul.blacklink a:hover {
 #topbreadcrumb a.open:link, #topbreadcrumb a.open:visited {
 	color: #35462C;
 }
-div.interiorcontents {
+div#interior-body {
 	width: 700px;
 	padding: 18px 18px 30px 18px;
 	float: left;
 }
-div.interiornews {
+div#interior-sidebar {
 	font: 13px/14px 'Trebuchet MS', Arial, sans-serif;
 	width: 200px;
 	margin: 20px 0 30px 0;
@@ -184,7 +184,7 @@ div.interiornews {
 	padding: 5px 0 10px 10px;	
 	float: left;
 }
-div.interiornews h4 {
+div#interior-sidebar h4 {
 	font-size: 14px;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -192,15 +192,15 @@ div.interiornews h4 {
 	margin: 0;
 	padding: 5px 0 5px 0;
 }
-div.interiornews ul {
+div#interior-sidebar ul {
 	margin: 0;
 	padding: 5px 0 5px 0;
 	color: #2f302d;
 }
-div.interiornews li {
+div#interior-sidebar li {
 	padding: 3px 0 3px 0;
 }
-div.interiornews a:link, div.interiornews a:visited {
+div#interior-sidebar a:link, div#interior-sidebar a:visited {
 	font-weight: bold;
 	display: block;
 }

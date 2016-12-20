@@ -42,7 +42,7 @@ Template Name: Spanish
     </div> 
     
     <!-- Interior contents mid-width container -->
-    <div class="interiorcontents">
+    <div id="interior-body">
     
     <?php if (!is_single() && !is_page()) : ?>
     	<?php if (is_archive()) : ?>
