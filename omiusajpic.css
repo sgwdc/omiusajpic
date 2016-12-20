@@ -151,7 +151,7 @@ a.blacklink:hover, a.darkgraylink:hover, ul.blacklink a:hover {
 	color: #2e64a0;
 }
 #homepage-sidebar {
-	width: 376px;
+	width: 275px;
 	float: left;
 	padding-top:20px;
 }
@@ -209,7 +209,7 @@ div.interiornews a:link, div.interiornews a:visited {
 #homepage-body {
 	float:left;
 	padding:20px;
-	width: 540px;
+	width: 640px;
 	_padding-right: 22px; /* IE6 */
 }
 
