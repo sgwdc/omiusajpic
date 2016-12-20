@@ -61,7 +61,7 @@
 		<!-- HEADER -->
 		<div id="topnav">
 			<?php if ($newspage || !is_home()) : ?>
-			<a href="<?php bloginfo('url'); ?>">Home</a> | 
+			<a href="<?php bloginfo('url'); ?>">Homepage</a> | 
 			<?php endif; ?>
 			<?php if ($newspage || !(is_page_template('spanish.php')||is_category(206)||in_category(206))) : ?>
 			<a href="<?php bloginfo('url'); ?>/espanol">En Español</a>
@@ -76,7 +76,12 @@
 			</div>
 			<div style="width:600px; float:left; color:#fff;">
 				<div style="padding-top:10px;">
-					<a href="/">Home</a> &nbsp; | &nbsp; <a href="/about/contact/">Contact</a> &nbsp; | &nbsp; <a href="/search-results/">Search</a>
+					<form method="get" action="/search-results/">
+						<input type="hidden" name="cx" value="005609722693116340484:_qkoaxczrj0" />
+						<input type="text" name="q" class="lefttextinput" value="Search our site" 
+						onfocus="if (this.value=='Search our site') this.value='';" onblur="if (this.value=='') this.value='Search our site';" />
+						<input type="submit" value="Go">
+					</form>
 				</div>
 				<div style="padding-top:20px;">
 					<h1 style="font-size:28px;">Justice, Peace, and Integrity of Creation</h1>
