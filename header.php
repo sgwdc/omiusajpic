@@ -1,4 +1,7 @@
 <?php
+	// Set a version number to ensure any obsolete CSS and JS files are not cached
+	$version = 1;
+
 	/* BLOCK ANY REQUESTS FROM GOOGLE TO DEV SERVER */
 	// If this is the local dev server
 	if ($_SERVER['SERVER_ADDR'] == "10.19.76.51") {
@@ -33,9 +36,7 @@
 	// Add the blog name to the HTML title
 	bloginfo('name');
 	?></title>
-	<style media="all" type="text/css">
-		@import url( <?php bloginfo('stylesheet_url'); ?> );
-	</style>
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/omiusajpic.css?ver=' . $version; ?>">
 	<link rel="feed alternate" type="application/rss+xml"
 	href="<?php bloginfo_rss('rss_url') ?>" title="<?php bloginfo_rss('title') ?>">
 	<meta name="description" content="The Missionary Oblates of Mary Immaculate's Justice, Peace, and Integrity of Creation effort is a global initiative to promote justice, equality, peace, and a clean and sustainable environment for all." />
