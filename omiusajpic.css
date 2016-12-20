@@ -10,6 +10,11 @@ body {
 	text-align: center;
 	color: #2f302d;
 }
+
+div#masthead {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
 #container {
 	margin: 0 auto 0 auto;
 	width: 980px;
