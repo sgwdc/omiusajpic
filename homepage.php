@@ -71,18 +71,8 @@ $hero_url = get_template_directory_uri() . '/images/' . $random_hero;
 	</div>
 </div>
 
-<style>
-	div#social-media {
-		padding:0 10px;
-	}
-	div#social-media img {
-		display:inline;
-		padding-right: 10px;
-	}
-</style>
-
-<div class="column" id="homepageright">
-	<div id="social-media" style="">
+<div class="column">
+	<div id="social-media">
 		<a href="https://twitter.com/omiusajpic" title="OMI Justice, Peace, and Integrity of Creation Twitter" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/twitter-bird-white-on-blue_32.png" alt="Twitter" /></a>
 		<a href="https://www.facebook.com/omiusajpic" title="OMI Justice, Peace, and Integrity of Creation Facebook" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/f_logo_32.png" alt="Facebook" /></a>
 		<a href="http://www.youtube.com/OMIJPIC" title="OMI Justice, Peace, and Integrity of Creation YouTube Channel" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/youtube_32.png" alt="YouTube" /></a>
