@@ -26,7 +26,6 @@ $hero_url = get_template_directory_uri() . '/images/' . $random_hero;
 
 <!-- MAIN CONTENT -->
 <div class="homecontents">
-	<a name="maincontent"></a>
 	<div id="homepageleft">
 		<!-- News -->
 		<h3><a href="news" class="darkgraylink">Recent News &amp; Updates</a></h3>

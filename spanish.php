@@ -13,7 +13,7 @@ Template Name: Spanish
 
 	<!-- MAIN SECTION -->
     <div class="maininterior">
-    <a name="maincontent"></a>
+    <a name="top"></a>
 
     <!-- Breadcrumb -->
     <div id="topbreadcrumb">    	
@@ -88,7 +88,7 @@ Template Name: Spanish
         </div>
 
 
-		<p style="text-align:center;clear:both;"><a href="#maincontent" class="small">arriba</a></p>
+		<p style="text-align:center;clear:both;"><a href="#top" class="small">arriba</a></p>
     </div>
     
     <?php include get_template_directory() . '/sidebar2_newspageversion.php'; ?>

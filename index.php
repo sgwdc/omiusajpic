@@ -21,7 +21,7 @@ if (strstr($page_uri,'/news')) $newspage = true;
 
 <!-- MAIN SECTION -->
 <div id="main" class="maininterior">
-<a name="maincontent"></a>
+<a name="top"></a>
 
 <!-- Breadcrumb -->
 <div id="topbreadcrumb">    	
