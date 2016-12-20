@@ -94,7 +94,7 @@ $news_title = 'Recent News';
         <!--<ul><?php wp_get_archives('type=monthly'); ?></ul>-->
         <select name="archive-dropdown" onChange='document.location.href=this.options[this.selectedIndex].value;'>
         <option value=""><?php echo esc_attr(__('Select Month')); ?></option>
-        <?php wp_get_archives('type=monthly&format=option'); ?> </select> <br />
+        <?php wp_get_archives('type=monthly&format=option'); ?> </select> <br>
         <?php endif; ?>
         
         <?php if (is_page_template('spanish.php')) : ?>

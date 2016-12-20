@@ -11,7 +11,7 @@
 				<li><a href="http://secure.oblatesusa.org/p-2023-donation.aspx?source=M17IGI202" target="_blank">Support Us</a></li>
 				<li><a href="/espanol">En Español</a></li>
 			</ul>
-			<p>Oblates JPIC Office 391 Michigan Ave NE, Washington, DC 20017 USA | phone (202) 529-4505 | fax (202) 529-4572<br />
+			<p>Oblates JPIC Office 391 Michigan Ave NE, Washington, DC 20017 USA | phone (202) 529-4505 | fax (202) 529-4572<br>
 			&copy;<?php echo date('Y') ?> Missionary Oblates of Mary Immaculate | <a href="/about/privacy">Privacy Policy</a> | <a href="/about/contact">Contact Us</a></p>
 			<p>Website by <a href="http://www.livingstreets.com/" title="Living Streets Consulting" target="_blank">Living Streets Consulting</a></p>
 			<?php wp_footer(); ?>

@@ -69,7 +69,7 @@ Template Name: Spanish
     	<p class="gray"><span><strong><?php the_time('F jS, Y') ?></strong></span></p>
     	<?php endif; ?>
     <?php else : ?>
-    	<br />
+    	<br>
     	<h2><a href="<?php the_permalink(); ?>" class="blacklink"><?php the_title(); ?></a>
     	<span class="newslistdate"><?php the_time('F jS, Y') ?></span>
         </h2>

@@ -89,7 +89,7 @@ echo $breadcrumb;
 			<?php endif; ?>
 		<?php endif; ?>
 		<?php else : ?>
-		<br />
+		<br>
 		<h2 class="newsheadline"><a href="<?php the_permalink(); ?>" class="blacklink"><?php the_title(); ?></a>
 		<?php /* english or spanish date? */ if (!$newspage && (is_page_template('spanish.php')||is_category(206)||in_category(206))) : ?>
 		<span class="newslistdate"><?php echo omi_spanish_date(the_date('j F Y','','',FALSE)); ?></span>

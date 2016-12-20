@@ -55,10 +55,10 @@ Template Name: Email List
 			<?php else : ?>
 			value="Su Direcci&oacute;n de Email" 
 			onfocus="this.value=''" 
-			<?php endif; ?> />
+			<?php endif; ?>>
 			<input type="hidden" name="u" value="cc5976ca8e2c41ca79b0c739c">
 			<input type="hidden" name="id" value="dacd45ed3a">
-			<input type="submit" value="<?php if ($newspage || !(is_page_template('spanish.php')||is_category(206)||in_category(206))) : ?>Go<?php else : ?>Ir <?php endif; ?>" class="leftsubmit" />
+			<input type="submit" value="<?php if ($newspage || !(is_page_template('spanish.php')||is_category(206)||in_category(206))) : ?>Go<?php else : ?>Ir <?php endif; ?>" class="leftsubmit">
 		</form>
 
 		<a href="/action" class="actionalertlink">See current and past action alerts &gt;</a>

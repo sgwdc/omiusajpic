@@ -39,7 +39,7 @@
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/omiusajpic.css?ver=' . $version; ?>">
 	<link rel="feed alternate" type="application/rss+xml"
 	href="<?php bloginfo_rss('rss_url') ?>" title="<?php bloginfo_rss('title') ?>">
-	<meta name="description" content="The Missionary Oblates of Mary Immaculate's Justice, Peace, and Integrity of Creation effort is a global initiative to promote justice, equality, peace, and a clean and sustainable environment for all." />
+	<meta name="description" content="The Missionary Oblates of Mary Immaculate's Justice, Peace, and Integrity of Creation effort is a global initiative to promote justice, equality, peace, and a clean and sustainable environment for all.">
 	<!--[if IE]><link rel="shortcut icon" href="<?php bloginfo('template_directory') ?>/images/favicon.ico"><![endif]-->
 	<link rel="icon" href="<?php bloginfo('template_directory') ?>/images/favicon.png">
 	<!-- Hook for plugins to insert code here (Avoids need to move WordPress Toolbar to the bottom of the browser window) -->
@@ -77,9 +77,9 @@
 			<div style="width:600px; float:left; color:#fff;">
 				<div style="padding-top:10px;">
 					<form method="get" action="/search-results/">
-						<input type="hidden" name="cx" value="005609722693116340484:_qkoaxczrj0" />
+						<input type="hidden" name="cx" value="005609722693116340484:_qkoaxczrj0">
 						<input type="text" name="q" class="lefttextinput" value="Search our site" 
-						onfocus="if (this.value=='Search our site') this.value='';" onblur="if (this.value=='') this.value='Search our site';" />
+						onfocus="if (this.value=='Search our site') this.value='';" onblur="if (this.value=='') this.value='Search our site';">
 						<input type="submit" value="Go">
 					</form>
 				</div>
