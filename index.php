@@ -50,7 +50,10 @@ echo $breadcrumb;
 ?>
 </div> 
 
-<?php include get_template_directory() . '/sidebar2_newspageversion.php'; ?>
+<?php
+	// Include the sidebar template sidebar-interior.php
+	get_sidebar('interior');
+?>
 
 <!-- Interior contents mid-width container -->
 <div id="interior-body">
