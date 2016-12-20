@@ -330,8 +330,8 @@ span.wpaudio-container {
 div.addthis_toolbox {
 	padding:20px 0;
 }
-/* Reincorporated from old design */
-#main.maininterior ul li {
+/* Custom bullet points and spacing */
+#main.maininterior ul li,  #interior-sidebar ul li {
 	margin: 2px 0 2px 2px;
 	padding: 3px 5px 3px 10px;
 	background: url(images/bluesquare_bullet.png) top left no-repeat;
