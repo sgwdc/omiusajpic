@@ -384,11 +384,11 @@ table#navbar td:hover a, table#navbar td.current a {
 	color: #4281bf; 
 }
 table#navbar td#home_icon {
-	background-image: url('<?php echo get_template_directory_uri() . "/images/homeicon_white.png"; ?>');
+	background-image: url('images/homeicon_white.png');
 	background-repeat: no-repeat;
 	background-position: center; 
 }
 table#navbar td#home_icon:hover, table#navbar td#home_icon.current {
-	background-image: url('<?php echo get_template_directory_uri() . "/images/homeicon_blue.png"; ?>');
+	background-image: url('images/homeicon_blue.png');
 }
 /* END: Horizontal navbar */
