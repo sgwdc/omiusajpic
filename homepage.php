@@ -70,8 +70,7 @@ $hero_url = get_template_directory_uri() . '/images/' . $random_hero;
 		<a href="http://www.youtube.com/OMIJPIC" title="OMI Justice, Peace, and Integrity of Creation YouTube Channel" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/youtube_32.png" alt="YouTube" /></a>
 		<a href="/email-list/" title="Email list"><img src="<?php bloginfo('template_directory'); ?>/images/email_list.png" alt="Email list" /></a>
 	</div>
-	<a class="twitter-timeline" href="https://twitter.com/omiusaJPIC" data-widget-id="682618667486556160">Tweets by @omiusaJPIC</a>
-	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	<a class="twitter-timeline" data-height="550" href="https://twitter.com/omiusaJPIC">Tweets by omiusaJPIC</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
 <br>
