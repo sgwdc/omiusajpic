@@ -59,6 +59,7 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 		<a href="https://twitter.com/omiusajpic" title="OMI Justice, Peace, and Integrity of Creation Twitter" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/twitter-bird-white-on-blue_32.png" alt="Twitter"></a>
 		<a href="https://www.facebook.com/omiusajpic" title="OMI Justice, Peace, and Integrity of Creation Facebook" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/f_logo_32.png" alt="Facebook"></a>
 		<a href="http://www.youtube.com/OMIJPIC" title="OMI Justice, Peace, and Integrity of Creation YouTube Channel" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/youtube_32.png" alt="YouTube"></a>
+		<a href="http://missionary-oblates-jpic.blogspot.com/" title="OMI Justice, Peace, and Integrity of Creation Blogspot blog" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/blogger_30px.png" alt="Blogger"></a>
 		<a href="/email-list/" title="Email list"><img src="<?php bloginfo('template_directory'); ?>/images/email_list.png" alt="Email list"></a>
 	</div>
 	<a class="twitter-timeline" data-height="550" href="https://twitter.com/omiusaJPIC">Tweets by omiusaJPIC</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
