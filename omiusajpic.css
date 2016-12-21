@@ -343,8 +343,14 @@ div.addthis_toolbox {
 }
 
 /* Social media */
-div#social-media img {
+div#social-media-left {
+	float:left;
+}
+div#social-media-left img {
 	display:inline;
+}
+div#social-media-right {
+	float:right;
 }
 
 /* Horizontal navbar */
