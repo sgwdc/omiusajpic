@@ -3,18 +3,9 @@
 Template Name: Homepage
 */
 get_header();
-// Hardcode hero images temporarily
-$hero_images = ["hero_screenshot_cherryblossoms.jpg", "hero_screenshot_offices.jpg", "hero_screenshot_library.jpg", "hero_screenshot_whitehouse.jpg", "hero_screenshot_pope.jpg", "hero_screenshot_group1.jpg", "hero_screenshot_largegroup.jpg"];
-$random_number = rand(1, count($hero_images));
-$random_hero = $hero_images[$random_number - 1];
-$hero_url = get_template_directory_uri() . '/images/' . $random_hero;
-?>
 
-<div>
-	<img src="<?php echo $hero_url; ?>">
-</div>
-
-<?php
+// Use the "Slider Revolution" plugin to insert the slider with the slug "homepage-slider", which rotates through the Featured Images and captions for all published posts in the category with the slug "homepage-slider"
+echo do_shortcode('[rev_slider alias="homepage-slider"]');
 	// Include the horizontal navbar
 	include 'navbar.php';
 ?>

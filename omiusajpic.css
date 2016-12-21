@@ -393,3 +393,21 @@ table#navbar td#home_icon:hover, table#navbar td#home_icon.current {
 	background-image: url('images/homeicon_blue.png');
 }
 /* END: Horizontal navbar */
+
+/* Slider Revolution */
+/* Black outline for captions */
+.rev_slider_wrapper a.tp-caption {
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	/* Maybe move this (and even the above?) to the Slider Revolution plugin? */
+	text-decoration: none;
+}
+/* Invert caption text & outline colors on rollover */
+.rev_slider_wrapper a.tp-caption:hover {
+	color:#000 !important;
+	text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+/* White border along the top */
+div.rev_slider_wrapper {
+	border-top:1px #fff solid;
+}
+/* END: Slider Revolution */
