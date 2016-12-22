@@ -19,9 +19,17 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 	<!-- News -->
 	<h3><a href="news" class="darkgraylink">Recent News &amp; Updates</a></h3>
 	<?php
-	// Get homepage posts 
-	$lastposts = get_posts('numberposts=4&category=90');
-	foreach($lastposts as $post) :
+	// Get homepage posts
+	$args = array(
+		'post_type' => 'post',
+		'category_name' => 'homepage-news',
+		'post_status' => 'publish',
+		'orderby' => 'date',
+		'order' => 'DESC',
+		'posts_per_page' => 4
+	);
+	$homepageNewsPosts = get_posts( $args );
+	foreach($homepageNewsPosts as $post) :
 		setup_postdata($post);
 		?>
 		<p class="clearfix">
