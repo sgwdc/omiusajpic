@@ -20,12 +20,12 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 	<h3><a href="news" class="darkgraylink">Recent News &amp; Updates</a></h3>
 	<?php
 	// Get homepage posts 
-	$lastposts = get_posts('numberposts=3&category=90');
+	$lastposts = get_posts('numberposts=4&category=90');
 	foreach($lastposts as $post) :
 		setup_postdata($post);
 		?>
 		<p class="clearfix">
-		<a href="<?php the_permalink(); ?>" class="big"><?php the_title(); ?></a><br>
+		<a href="<?php the_permalink(); ?>" class="homepage-title"><?php the_title(); ?></a><br>
 		<?php
 			// If a "Featured Image" exists for this post, display it
 			if (has_post_thumbnail($post)) {
@@ -33,7 +33,7 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 				echo '<a href="' . get_the_permalink() . '"><img src="' . $thumbnailURL . '" style="float:left; padding:2px 5px 0 0;"></a>';
 			}
 			// Display the post date
-			echo '<em>' . get_the_time('F jS, Y') . ' -- </em>';
+			echo '<span class="homepage-blurb"><em>' . get_the_time('F jS, Y') . ' -- </em>';
 			// Display an excerpt of the post content
 			$thecontent = get_the_content();
 			// Strip HTML tags, and remove left over line breaks and white space
@@ -45,7 +45,7 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 			$thecontent = preg_replace('/\s+/', ' ', $thecontent);
 			// Take only the first 255 characters, and trim whitespace
 			$thecontent = ltrim(rtrim(substr($thecontent, 0, 255))) . "...";
-			echo $thecontent . '<br><a href="' . get_the_permalink() . '">Read more &gt;</a>';
+			echo $thecontent . '</span><br><a href="' . get_the_permalink() . '">Read more &gt;</a>';
 		?>
 		</p>
 	<?php endforeach; ?>
@@ -65,7 +65,7 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 			<a id="subscribe-button" href="/subscribe/" title="Subscribe to OMI JPIC's email lists" alt="Subscribe">Subscribe</a>
 		</div>
 	</div>
-	<a class="twitter-timeline" data-height="550" href="https://twitter.com/omiusaJPIC">Tweets by omiusaJPIC</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+	<a class="twitter-timeline" data-height="850" href="https://twitter.com/omiusaJPIC">Tweets by omiusaJPIC</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
 <br>

@@ -96,8 +96,12 @@ ul {
 	margin: 0;
 	padding: 0;
 }
-.big {
-	font-size: 17px;
+.homepage-title {
+	font-size: 24px;
+}
+.homepage-blurb {
+	font-size: 18px;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 .small {
 	font-size: 10px;
