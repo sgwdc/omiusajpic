@@ -10,6 +10,15 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 	include 'navbar.php';
 ?>
 
+<script>
+	// Callback function called by the Slider Revolution plugin to add a "click" effect so the user knows something is happening
+	function readMoreClicked() {
+		jQuery('a.rev-btn').css('background-color', '#f00');
+		setTimeout(function() {
+			jQuery('a.rev-btn').css('background-color', '#fff');
+		}, 25);
+	}
+</script>
 <!-- Breadcrumb -->
 <div id="topbreadcrumb">
 	Homepage
@@ -60,7 +69,6 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 
 	<p><a href="/news/">See more news &amp; updates &gt;</a></p>
 </div>
-
 <div id="homepage-sidebar">
 	<div class="clearfix">
 		<div id="social-media-left">
