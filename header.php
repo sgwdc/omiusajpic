@@ -83,14 +83,14 @@
 						<input type="submit" value="Go">
 					</form>
 				</div>
-				<div style="padding-top:10px;">
-					<h1 style="font-size:28px;">Justice, Peace, and Integrity of Creation</h1>
-				</div>
-				<div style="padding-top:10px;">
-					<h3 style="font-size:18px; font-style: italic;">A Ministry of Missionary Oblates of Mary Immaculate</h3>
-				</div>
 				<div style="padding-top:5px;">
-					<h3 style="font-size:15px; font-style: italic;">United States Province</h3>
+					<h1 style="font-size:28px; margin:0;">Justice, Peace, and Integrity of Creation</h1>
+				</div>
+				<div style="padding-top:3px;">
+					<h3 style="font-size:18px; font-style: italic; margin:0;">A Ministry of Missionary Oblates of Mary Immaculate</h3>
+				</div>
+				<div style="padding-top:2px;">
+					<h3 style="font-size:15px; font-style: italic; margin:0;">United States Province</h3>
 				</div>
 			</div>
 			<div style="width:139px; float:right; color:#fff; padding:25px 10px 0 0;">
