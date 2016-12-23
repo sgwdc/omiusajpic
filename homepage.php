@@ -83,7 +83,70 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 			<a id="subscribe-button" href="/subscribe/" title="Subscribe to OMI JPIC's email lists" alt="Subscribe">Subscribe</a>
 		</div>
 	</div>
-	<a class="twitter-timeline" data-height="850" href="https://twitter.com/omiusaJPIC">Tweets by omiusaJPIC</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+	<br>
+
+	<?php
+		$fb_page_id = "omiusajpic";
+		$profile_photo_src = "https://graph.facebook.com/{$fb_page_id}/picture?type=square";
+		$access_token = "145646098930189|TZqBnqmHQBv6q2bHMKVIumMd6_I";
+		//$fields = "id,application,call_to_action,caption,created_time,description,feed_targeting,from,icon,instagram_eligibility,is_hidden,is_instagram_eligible,is_published,link,message,message_tags,name,object_id,parent_id,permalink_url,picture,place,privacy,properties,shares,source,status_type,story,story_tags,targeting,to,type,updated_time,with_tags";
+		$fields = "name,message,picture,permalink_url";
+		$limit = 3;
+		$json_link = "https://graph.facebook.com/{$fb_page_id}/posts?access_token={$access_token}&fields={$fields}&limit={$limit}";
+		$json = file_get_contents($json_link);
+		$obj = json_decode($json, true);
+		// Iterate over the Facebook posts
+		$feed_item_count = count($obj['data']);
+		for($x=0; $x<$feed_item_count; $x++){
+		    // user's custom message
+		    $message = $obj['data'][$x]['message'];
+		    // picture from the link
+		    $picture = $obj['data'][$x]['picture'];
+		    // name or title of the link posted
+		    $name = $obj['data'][$x]['name'];
+		    // when it was posted
+		    $created_time = $obj['data'][$x]['created_time'];
+		    $converted_date_time = date( 'Y-m-d H:i:s', strtotime($created_time));
+		    $ago_value = time_elapsed_string($converted_date_time);
+		    $facebook_permalink = $obj['data'][$x]['permalink_url'];
+		    // Display the Facebook post
+			echo '<div class="facebook-post clearfix">';
+				echo '<a href="https://www.facebook.com/omiusajpic" target="_blank"> <img src="' . get_bloginfo('template_directory') . '/images/facebook_15px.png" alt="Facebook" style="vertical-align:middle; padding-bottom:3px;"></a> ';
+		        echo "<a href='{$facebook_permalink}' target='_blank'>";
+		        echo $name . '</a> -- <em>' . $ago_value . '</em><br>';
+		        echo '<div style="float:left"><img src="' . $picture . '" style="padding-right:5px;"></div>';
+		        echo "{$message}";
+		        echo "<br>";
+		        echo "<a href='{$facebook_permalink}' target='_blank'>Read on Facebook &gt;</a>";
+		    echo "</div>";
+		}
+		// Convert datetime object to 'time ago' text
+		function time_elapsed_string($datetime, $full = false) {
+		    $now = new DateTime;
+		    $ago = new DateTime($datetime);
+		    $diff = $now->diff($ago);
+		    $diff->w = floor($diff->d / 7);
+		    $diff->d -= $diff->w * 7;
+		    $string = array(
+		        'y' => 'year',
+		        'm' => 'month',
+		        'w' => 'week',
+		        'd' => 'day',
+		        'h' => 'hour',
+		        'i' => 'minute',
+		        's' => 'second',
+		    );
+		    foreach ($string as $k => &$v) {
+		        if ($diff->$k) {
+		            $v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
+		        } else {
+		            unset($string[$k]);
+		        }
+		    }
+		     if (!$full) $string = array_slice($string, 0, 1);
+		    return $string ? implode(', ', $string) . ' ago' : 'just now';
+		}
+	?>
 </div>
 
 <br>
