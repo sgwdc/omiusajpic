@@ -76,9 +76,8 @@ Template Name: Email Lists
 			the_content('<p><strong>Click here to read more &raquo;</strong></p>');
 			echo '</div>';
 			edit_post_link('Edit post', '<p align="center"><b>[ ', ' ]</b></p>');
+		endforeach; 
 		?>
-		<?php endforeach; 
-		wp_reset_postdata();?>
 
 		<p style="text-align:center;clear:both;"><a href="#top" class="small">Return to Top</a></p>
 	</div>

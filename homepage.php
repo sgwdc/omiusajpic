@@ -65,7 +65,9 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 			echo $thecontent . '</span><br><a href="' . get_the_permalink() . '">Read more &gt;</a>';
 		?>
 		</p>
-	<?php endforeach; ?>
+	<?php
+	endforeach;
+	?>
 
 	<p><a href="/news/">See more news &amp; updates &gt;</a></p>
 </div>
