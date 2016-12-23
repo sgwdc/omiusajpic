@@ -91,8 +91,8 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 		$access_token = "145646098930189|TZqBnqmHQBv6q2bHMKVIumMd6_I";
 		//$fields = "id,application,call_to_action,caption,created_time,description,feed_targeting,from,icon,instagram_eligibility,is_hidden,is_instagram_eligible,is_published,link,message,message_tags,name,object_id,parent_id,permalink_url,picture,place,privacy,properties,shares,source,status_type,story,story_tags,targeting,to,type,updated_time,with_tags";
 		$fields = "name,message,picture,permalink_url";
-		$limit = 3;
-		$json_link = "https://graph.facebook.com/{$fb_page_id}/posts?access_token={$access_token}&fields={$fields}&limit={$limit}";
+		$num_posts = 4;
+		$json_link = "https://graph.facebook.com/{$fb_page_id}/posts?access_token={$access_token}&fields={$fields}&limit={$num_posts}";
 		$json = file_get_contents($json_link);
 		$obj = json_decode($json, true);
 		// Iterate over the Facebook posts
