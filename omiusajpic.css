@@ -192,7 +192,7 @@ div#interior-sidebar a:link, div#interior-sidebar a:visited {
 	_padding-right: 22px; /* IE6 */
 }
 
-#homepage-body h3 {
+#homepage-body h3, #homepage-sidebar h3 {
 	border-bottom: 3px solid #e3eedc;
 	padding: 5px 5px 6px 0;
 	margin: 0 20px 15px 0;

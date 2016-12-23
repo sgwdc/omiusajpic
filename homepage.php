@@ -26,7 +26,7 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 
 <div id="homepage-body">
 	<!-- News -->
-	<h3><a href="news" class="darkgraylink">Recent News &amp; Updates</a></h3>
+	<h3><a href="news" class="darkgraylink">Website Updates</a></h3>
 	<?php
 	// Get homepage posts
 	$args = array(
@@ -68,14 +68,16 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 	<?php
 	endforeach;
 	?>
-
-	<p><a href="/news/">See more news &amp; updates &gt;</a></p>
+	<p><a href="/news/">See more website updates &gt;</a></p>
 </div>
+
 <div id="homepage-sidebar">
+	<h3><a href="news" class="darkgraylink">Social Media Updates</a></h3>
+
 	<div class="clearfix">
 		<div id="social-media-left">
-			<a href="https://twitter.com/omiusajpic" title="Open OMI JPIC Twitter in a new tab/window" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/twitter_30px.png" alt="Twitter"></a>
 			<a href="https://www.facebook.com/omiusajpic" title="Open OMI JPIC Facebook in a new tab/window" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/facebook_30px.png" alt="Facebook"></a>
+			<a href="https://twitter.com/omiusajpic" title="Open OMI JPIC Twitter in a new tab/window" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/twitter_30px.png" alt="Twitter"></a>
 			<a href="https://www.youtube.com/OMIJPIC" title="Open OMI JPIC YouTube Channel in a new tab/window" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/youtube_30px.png" alt="YouTube"></a>
 			<a href="https://missionary-oblates-jpic.blogspot.com/" title="Open OMI JPIC Blogspot blog in a new tab/window" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/blogger_30px.png" alt="Blogger"></a>
 		</div>
@@ -147,6 +149,7 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 		    return $string ? implode(', ', $string) . ' ago' : 'just now';
 		}
 	?>
+	<p><a href="https://www.facebook.com/omiusajpic" target="_blank">See more Facebook updates &gt;</a></p>
 </div>
 
 <br>
