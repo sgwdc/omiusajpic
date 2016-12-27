@@ -114,10 +114,10 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 		    // Display the Facebook post
 			echo '<div class="facebook-post clearfix">';
 				echo '<a href="https://www.facebook.com/omiusajpic" target="_blank"> <img src="' . get_bloginfo('template_directory') . '/images/facebook_15px.png" alt="Facebook" style="vertical-align:middle; padding-bottom:3px;"></a> ';
-		        echo "<a href='{$facebook_permalink}' target='_blank'>";
+		        echo "<a href='{$facebook_permalink}' class='facebook-title' target='_blank'>";
 		        echo $name . '</a> -- <em>' . $ago_value . '</em><br>';
 		        echo '<div style="float:left"><img src="' . $picture . '" style="padding-right:5px;"></div>';
-		        echo "{$message}";
+		        echo '<span class="facebook-blurb">' . $message . '</span>';
 		        echo "<br>";
 		        echo "<a href='{$facebook_permalink}' target='_blank'>Read on Facebook &gt;</a>";
 		    echo "</div>";

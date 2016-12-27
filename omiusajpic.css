@@ -447,3 +447,14 @@ a#subscribe-button:active:after {
 div.facebook-post {
 	padding-bottom:15px;
 }
+a.facebook-title {
+	font-size: 17px;
+	text-decoration: none;
+}
+a.facebook-title:hover {
+	text-decoration: underline;
+}
+span.facebook-blurb {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size:14px;
+}
