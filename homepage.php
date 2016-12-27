@@ -47,7 +47,7 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 			// If a "Featured Image" exists for this post, display it
 			if (has_post_thumbnail($post)) {
 				$thumbnailURL = get_the_post_thumbnail_url($post, $size="thumbnail");
-				echo '<a href="' . get_the_permalink() . '"><img src="' . $thumbnailURL . '" style="float:left; padding:2px 5px 0 0;"></a>';
+				echo '<a href="' . get_the_permalink() . '"><img src="' . $thumbnailURL . '" style="float:left; padding:2px 5px 0 0;" width="150" height="150"></a>';
 			}
 			// Display the post date
 			echo '<span class="homepage-blurb"><em>' . get_the_time('F jS, Y') . ' -- </em>';
