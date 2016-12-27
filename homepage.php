@@ -50,7 +50,7 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 				echo '<a href="' . get_the_permalink() . '"><img src="' . $thumbnailURL . '" style="float:left; padding:2px 5px 0 0;" width="150" height="150"></a>';
 			}
 			// Display the post date
-			echo '<span class="homepage-blurb"><em>' . get_the_time('F jS, Y') . ' -- </em>';
+			echo '<span class="homepage-blurb"><em>' . get_the_time('F jS, Y') . ' &mdash; </em>';
 			// Display an excerpt of the post content
 			$thecontent = get_the_content();
 			// Strip HTML tags, and remove left over line breaks and white space
@@ -85,7 +85,6 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 			<a id="subscribe-button" href="/subscribe/" title="Subscribe to OMI JPIC's email lists" alt="Subscribe">Subscribe</a>
 		</div>
 	</div>
-	<br>
 
 	<?php
 		$fb_page_id = "omiusajpic";
@@ -119,7 +118,7 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 		        echo "<a href='{$facebook_permalink}' target='_blank'>";
 		        echo '<img src="' . $picture . '" style="float:left; padding:2px 5px 0 0;">';
 		        echo "</a>";
-		        echo '<span class="facebook-blurb"><em>' . $ago_value . ' -- </em>' . $message;
+		        echo '<span class="facebook-blurb"><em>' . $ago_value . ' &mdash; </em>' . $message;
 		        echo "<br>";
 		        echo "<a href='{$facebook_permalink}' target='_blank'>Read on Facebook &gt;</a></span>";
 		    echo "</p>";
