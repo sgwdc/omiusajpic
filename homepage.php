@@ -62,7 +62,7 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 			$thecontent = preg_replace('/\s+/', ' ', $thecontent);
 			// Take only the first 255 characters, and trim whitespace
 			$thecontent = ltrim(rtrim(substr($thecontent, 0, 255))) . "...";
-			echo $thecontent . '</span><br><a href="' . get_the_permalink() . '">Read more &gt;</a>';
+			echo $thecontent . '<br><a href="' . get_the_permalink() . '">Read more &gt;</a></span>';
 		?>
 		</p>
 	<?php
@@ -112,15 +112,17 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 		    $ago_value = time_elapsed_string($converted_date_time);
 		    $facebook_permalink = $obj['data'][$x]['permalink_url'];
 		    // Display the Facebook post
-			echo '<div class="facebook-post clearfix">';
-				echo '<a href="https://www.facebook.com/omiusajpic" target="_blank"> <img src="' . get_bloginfo('template_directory') . '/images/facebook_15px.png" alt="Facebook" style="vertical-align:middle; padding-bottom:3px;"></a> ';
+			echo '<p class="clearfix">';
+				echo '<a href="https://www.facebook.com/omiusajpic" target="_blank"><img src="' . get_bloginfo('template_directory') . '/images/facebook_15px.png" alt="Facebook" style="vertical-align:middle; padding-bottom:3px;"></a> ';
 		        echo "<a href='{$facebook_permalink}' class='facebook-title' target='_blank'>";
 		        echo $name . '</a><br>';
-		        echo '<div style="float:left"><img src="' . $picture . '" style="padding-right:5px;"></div>';
-		        echo '<span class="facebook-blurb"><em>' . $ago_value . '</em> -- ' . $message . '</span>';
+		        echo "<a href='{$facebook_permalink}' target='_blank'>";
+		        echo '<img src="' . $picture . '" style="float:left; padding:2px 5px 0 0;">';
+		        echo "</a>";
+		        echo '<span class="facebook-blurb"><em>' . $ago_value . ' -- </em>' . $message;
 		        echo "<br>";
-		        echo "<a href='{$facebook_permalink}' target='_blank'>Read on Facebook &gt;</a>";
-		    echo "</div>";
+		        echo "<a href='{$facebook_permalink}' target='_blank'>Read on Facebook &gt;</a></span>";
+		    echo "</p>";
 		}
 		// Convert datetime object to 'time ago' text
 		function time_elapsed_string($datetime, $full = false) {

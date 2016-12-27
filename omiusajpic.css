@@ -444,9 +444,6 @@ a#subscribe-button:active:after {
 }
 
 /* Facebook API integration */
-div.facebook-post {
-	padding-bottom:15px;
-}
 a.facebook-title {
 	font-size: 17px;
 	text-decoration: none;
