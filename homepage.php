@@ -60,9 +60,19 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 			$thecontent = preg_replace($shortcode_pattern, '', $thecontent);
 			// Remove multiple spaces
 			$thecontent = preg_replace('/\s+/', ' ', $thecontent);
-			// Take only the first 255 characters, and trim whitespace
-			$thecontent = ltrim(rtrim(substr($thecontent, 0, 255))) . "...";
-			echo $thecontent . '<br><a href="' . get_the_permalink() . '">Read more &gt;</a></span>';
+			// Convert string into an array of words
+			$thecontent_array = explode(' ', $thecontent);
+			$excerpt = '';
+			// Set the maximum length of the excerpt
+			$max_length = 255;
+			// While the excerpt is less than the maximum number of characters, AND there is still more to be displayed
+			while (strlen($excerpt) < $max_length && count($thecontent_array) > 0) {
+				// Append the next array element to the excerpt string
+				$excerpt .= array_shift($thecontent_array) . ' ';
+			}
+			// Trim whitespace, AND add an ellipsis
+			$excerpt = ltrim(rtrim($excerpt)) . "&hellip;";
+			echo $excerpt . '<br><a href="' . get_the_permalink() . '">Read more &gt;</a></span>';
 		?>
 		</p>
 	<?php
