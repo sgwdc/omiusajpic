@@ -50,7 +50,7 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 				echo '<a href="' . get_the_permalink() . '"><img src="' . $thumbnailURL . '" style="float:left; padding:2px 5px 0 0;" width="150" height="150"></a>';
 			}
 			// Display the post date
-			echo '<span class="homepage-blurb"><em>' . get_the_time('F jS, Y') . ' &mdash; </em>';
+			echo '<span class="homepage-blurb"><em>' . get_the_time('D M j, Y') . ' &mdash; </em>';
 			// Display an excerpt of the post content
 			$thecontent = get_the_content();
 			// Strip HTML tags, and remove left over line breaks and white space
