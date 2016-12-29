@@ -38,10 +38,19 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 		'posts_per_page' => 4
 	);
 	$homepageNewsPosts = get_posts( $args );
+	$posts_returned = count($homepageNewsPosts);
+	$count = 0;
 	foreach($homepageNewsPosts as $post) :
 		setup_postdata($post);
+		$count++;
+		// If this is not the last website post
+		if ($count < $posts_returned) {
+			echo '<p class="homepage-post clearfix">';
+		// Otherwise it's the last website post
+		} else {
+			echo '<p class="homepage-post homepage-post-last clearfix">';
+		}
 		?>
-		<p class="clearfix">
 		<a href="<?php the_permalink(); ?>" class="homepage-title"><?php the_title(); ?></a><br>
 		<?php
 			// If a "Featured Image" exists for this post, display it
@@ -121,7 +130,13 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 		    $ago_value = time_elapsed_string($converted_date_time);
 		    $facebook_permalink = $obj['data'][$x]['permalink_url'];
 		    // Display the Facebook post
-			echo '<p class="clearfix">';
+		    // If this is not the last Facebook post
+		    if (($x + 1) < $feed_item_count) {
+		      echo '<p class="facebook-post clearfix">';
+		    // Otherwise it's the last Facebook post
+		    } else {
+		      echo '<p class="facebook-post facebook-post-last clearfix">';
+		    }
 				echo '<a href="https://www.facebook.com/omiusajpic" target="_blank"><img src="' . get_bloginfo('template_directory') . '/images/facebook_15px.png" alt="Facebook" style="vertical-align:middle; padding-bottom:3px;"></a> ';
 		        echo "<a href='{$facebook_permalink}' class='facebook-title' target='_blank'>";
 		        echo $name . '</a><br>';

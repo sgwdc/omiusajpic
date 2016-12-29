@@ -455,3 +455,11 @@ span.facebook-blurb {
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 	font-size:14px;
 }
+p.homepage-post, p.facebook-post {
+	padding-bottom:20px;
+	border-bottom:1px #ddd solid;
+}
+p.homepage-post-last, p.facebook-post-last {
+	border-bottom-style:none;
+	padding-bottom:0;
+}
