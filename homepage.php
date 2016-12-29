@@ -122,8 +122,10 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 		    $message = $obj['data'][$x]['message'];
 		    // Ignore OMI JPIC website articles that were posted to Facebook since they're already displayed on the homepage
 		    if (substr($message, 0, 21) != "http://omiusajpic.org") {
-			    // picture from the link
-			    $picture = $obj['data'][$x]['picture'];
+			    // If it exists, use the picture from the link
+			    if (isset($obj['data'][$x]['picture'])) $picture = $obj['data'][$x]['picture'];
+			    // Otherwise use the Facebook page picture
+			    else $picture = $profile_photo_src;
 			    // name or title of the link posted
 			    $name = $obj['data'][$x]['name'];
 			    // when it was posted
