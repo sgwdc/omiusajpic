@@ -128,8 +128,10 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 			    if (isset($obj['data'][$x]['picture'])) $picture = $obj['data'][$x]['picture'];
 			    // Otherwise use the Facebook page picture
 			    else $picture = $profile_photo_src;
-			    // name or title of the link posted
-			    $name = $obj['data'][$x]['name'];
+			    // If the "name" field exists, use that for the title
+			    if (isset($obj['data'][$x]['name'])) $title = $obj['data'][$x]['name'];
+			    // Otherwise use the "message" field
+			    else $title = $obj['data'][$x]['message'];
 			    // when it was posted
 			    $created_time = $obj['data'][$x]['created_time'];
 			    $converted_date_time = date( 'Y-m-d H:i:s', strtotime($created_time));
@@ -145,7 +147,7 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 			    }
 					echo '<a href="https://www.facebook.com/omiusajpic" target="_blank"><img src="' . get_bloginfo('template_directory') . '/images/facebook_15px.png" alt="Facebook" style="vertical-align:middle; padding-bottom:3px;"></a> ';
 			        echo "<a href='{$facebook_permalink}' class='facebook-title' target='_blank'>";
-			        echo $name . '</a><br>';
+			        echo $title . '</a><br>';
 			        echo "<a href='{$facebook_permalink}' target='_blank'>";
 			        echo '<img src="' . $picture . '" style="float:left; padding:2px 5px 0 0;">';
 			        echo "</a>";
