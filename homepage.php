@@ -118,12 +118,19 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 		// Iterate over the Facebook posts
 		$feed_item_count = count($obj['data']);
 		for($x=0; $x<$feed_item_count; $x++){
-		    // If the Facebook post has a custom message, use that for the description
-		    if (isset($obj['data'][$x]['message'])) $description = $obj['data'][$x]['message'];
-		    // Otherwise use the "description"
-		    else $description = $obj['data'][$x]['description'];
+		    // If the Facebook post has a custom message AND it's not a link
+		    if (isset($obj['data'][$x]['message']) && substr($obj['data'][$x]['message'], 0, 4) != "http") {
+		    	// Start the blurb with the custom message
+		    	$blurb .= $obj['data'][$x]['message'] . ' - ';
+		    } else {
+		    	$blurb = '';
+		    }
+		    // Get the "description" field
+		    $description = $obj['data'][$x]['description'];
 		    // Ignore OMI JPIC website articles that were posted to Facebook since they're already displayed on the homepage
 		    if (substr($description, 0, 21) != "http://omiusajpic.org") {
+			    // Append the description field to the blurb
+			    $blurb .= $description;
 			    // If it exists, use the picture from the link
 			    if (isset($obj['data'][$x]['picture'])) $picture = $obj['data'][$x]['picture'];
 			    // Otherwise use the Facebook page picture
@@ -151,7 +158,7 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 			        echo "<a href='{$facebook_permalink}' target='_blank'>";
 			        echo '<img src="' . $picture . '" style="float:left; padding:2px 5px 0 0;">';
 			        echo "</a>";
-			        echo '<span class="facebook-blurb"><em>' . $ago_value . ' &mdash; </em>' . $description;
+			        echo '<span class="facebook-blurb"><em>' . $ago_value . ' &mdash; </em>' . $blurb;
 			        echo "<br>";
 			        echo "<a href='{$facebook_permalink}' target='_blank'>Read on Facebook &gt;</a></span>";
 			    echo "</p>";
