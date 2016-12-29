@@ -131,6 +131,21 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 		    if (substr($description, 0, 21) != "http://omiusajpic.org") {
 			    // Append the description field to the blurb
 			    $blurb .= $description;
+				// Convert string into an array of words
+				$blurb_array = explode(' ', $blurb);
+				$excerpt = '';
+				// Set the maximum length of the excerpt
+				$max_length = 180;
+				// While the excerpt is less than the maximum number of characters, AND there is still more to be displayed
+				while (strlen($excerpt) < $max_length && count($blurb_array) > 0) {
+					// Append the next array element to the excerpt string
+					$excerpt .= array_shift($blurb_array) . ' ';
+				}
+				// Trim whitespace, AND add an ellipsis
+				$blurb = ltrim(rtrim($excerpt));
+				// Only append an ellipsis if Facebook didn't already do so
+				$blurb_length = count($blurb);
+				if (substr($blurb, $blurb_length - 4) != "...") $blurb .= "&hellip;";
 			    // If it exists, use the picture from the link
 			    if (isset($obj['data'][$x]['picture'])) $picture = $obj['data'][$x]['picture'];
 			    // Otherwise use the Facebook page picture
