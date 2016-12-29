@@ -120,33 +120,36 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 		for($x=0; $x<$feed_item_count; $x++){
 		    // user's custom message
 		    $message = $obj['data'][$x]['message'];
-		    // picture from the link
-		    $picture = $obj['data'][$x]['picture'];
-		    // name or title of the link posted
-		    $name = $obj['data'][$x]['name'];
-		    // when it was posted
-		    $created_time = $obj['data'][$x]['created_time'];
-		    $converted_date_time = date( 'Y-m-d H:i:s', strtotime($created_time));
-		    $ago_value = time_elapsed_string($converted_date_time);
-		    $facebook_permalink = $obj['data'][$x]['permalink_url'];
-		    // Display the Facebook post
-		    // If this is not the last Facebook post
-		    if (($x + 1) < $feed_item_count) {
-		      echo '<p class="facebook-post clearfix">';
-		    // Otherwise it's the last Facebook post
-		    } else {
-		      echo '<p class="facebook-post facebook-post-last clearfix">';
-		    }
-				echo '<a href="https://www.facebook.com/omiusajpic" target="_blank"><img src="' . get_bloginfo('template_directory') . '/images/facebook_15px.png" alt="Facebook" style="vertical-align:middle; padding-bottom:3px;"></a> ';
-		        echo "<a href='{$facebook_permalink}' class='facebook-title' target='_blank'>";
-		        echo $name . '</a><br>';
-		        echo "<a href='{$facebook_permalink}' target='_blank'>";
-		        echo '<img src="' . $picture . '" style="float:left; padding:2px 5px 0 0;">';
-		        echo "</a>";
-		        echo '<span class="facebook-blurb"><em>' . $ago_value . ' &mdash; </em>' . $message;
-		        echo "<br>";
-		        echo "<a href='{$facebook_permalink}' target='_blank'>Read on Facebook &gt;</a></span>";
-		    echo "</p>";
+		    // Ignore OMI JPIC website articles that were posted to Facebook since they're already displayed on the homepage
+		    if (substr($message, 0, 21) != "http://omiusajpic.org") {
+			    // picture from the link
+			    $picture = $obj['data'][$x]['picture'];
+			    // name or title of the link posted
+			    $name = $obj['data'][$x]['name'];
+			    // when it was posted
+			    $created_time = $obj['data'][$x]['created_time'];
+			    $converted_date_time = date( 'Y-m-d H:i:s', strtotime($created_time));
+			    $ago_value = time_elapsed_string($converted_date_time);
+			    $facebook_permalink = $obj['data'][$x]['permalink_url'];
+			    // Display the Facebook post
+			    // If this is not the last Facebook post
+			    if (($x + 1) < $feed_item_count) {
+			      echo '<p class="facebook-post clearfix">';
+			    // Otherwise it's the last Facebook post
+			    } else {
+			      echo '<p class="facebook-post facebook-post-last clearfix">';
+			    }
+					echo '<a href="https://www.facebook.com/omiusajpic" target="_blank"><img src="' . get_bloginfo('template_directory') . '/images/facebook_15px.png" alt="Facebook" style="vertical-align:middle; padding-bottom:3px;"></a> ';
+			        echo "<a href='{$facebook_permalink}' class='facebook-title' target='_blank'>";
+			        echo $name . '</a><br>';
+			        echo "<a href='{$facebook_permalink}' target='_blank'>";
+			        echo '<img src="' . $picture . '" style="float:left; padding:2px 5px 0 0;">';
+			        echo "</a>";
+			        echo '<span class="facebook-blurb"><em>' . $ago_value . ' &mdash; </em>' . $message;
+			        echo "<br>";
+			        echo "<a href='{$facebook_permalink}' target='_blank'>Read on Facebook &gt;</a></span>";
+			    echo "</p>";
+			}
 		}
 		// Convert datetime object to 'time ago' text
 		function time_elapsed_string($datetime, $full = false) {
