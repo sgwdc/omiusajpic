@@ -121,13 +121,13 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 		    // If the Facebook post has a custom message AND it's not a link
 		    if (isset($obj['data'][$x]['message']) && substr($obj['data'][$x]['message'], 0, 4) != "http") {
 		    	// Start the blurb with the custom message
-		    	$blurb .= $obj['data'][$x]['message'] . ' - ';
+		    	$blurb = $obj['data'][$x]['message'] . ' - ';
 		    } else {
 		    	$blurb = '';
 		    }
 		    // Get the "description" field
 		    $description = $obj['data'][$x]['description'];
-		    // Ignore OMI JPIC website articles that were posted to Facebook since they're already displayed on the homepage
+		    // Filter out OMI JPIC website articles posted to Facebook since they're already displayed on the homepage
 		    if (substr($description, 0, 21) != "http://omiusajpic.org") {
 			    // Append the description field to the blurb
 			    $blurb .= $description;
