@@ -195,7 +195,7 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 		    } else {
 		      echo '<p class="facebook-post facebook-post-last clearfix">';
 		    }
-			echo '<a href="https://www.facebook.com/omiusajpic" target="_blank"><img src="' . get_bloginfo('template_directory') . '/images/facebook_15px.png" alt="Facebook" style="vertical-align:middle; padding-bottom:3px;"></a> ';
+			echo '<a href="' . $facebook_permalink . '" target="_blank"><img src="' . get_bloginfo('template_directory') . '/images/facebook_15px.png" alt="Facebook" style="vertical-align:middle; padding-bottom:3px;"></a> ';
 	        echo "<a href='{$facebook_permalink}' class='facebook-title' target='_blank'>";
 	        echo $name . '</a><br>';
 	        echo "<a href='{$facebook_permalink}' target='_blank'>";
@@ -246,3 +246,10 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 <br>
 
 <?php get_footer(); ?>
+
+<?php
+/* DEV output
+echo '<pre style="text-align:left;">';
+print_r($obj);
+*/
+?>
