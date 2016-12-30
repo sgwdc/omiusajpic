@@ -106,79 +106,110 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 	</div>
 
 	<?php
+	    /* CONNECT TO THE FACEBOOK GRAPH API TO GET FACEBOOK POSTS */
 		$fb_page_id = "omiusajpic";
 		$profile_photo_src = "https://graph.facebook.com/{$fb_page_id}/picture?type=square";
 		$access_token = "145646098930189|TZqBnqmHQBv6q2bHMKVIumMd6_I";
 		//$fields = "id,application,call_to_action,caption,created_time,description,feed_targeting,from,icon,instagram_eligibility,is_hidden,is_instagram_eligible,is_published,link,message,message_tags,name,object_id,parent_id,permalink_url,picture,place,privacy,properties,shares,source,status_type,story,story_tags,targeting,to,type,updated_time,with_tags";
-		$fields = "name,message,picture,permalink_url";
+		$fields = "name,message,description,picture,permalink_url";
 		$num_posts = 2;
 		$json_link = "https://graph.facebook.com/{$fb_page_id}/posts?access_token={$access_token}&fields={$fields}&limit={$num_posts}";
 		$json = file_get_contents($json_link);
 		$obj = json_decode($json, true);
-		// Iterate over the Facebook posts
+
+	    /* ITERATE OVER THE FACEBOOK POSTS */
 		$feed_item_count = count($obj['data']);
 		for($x=0; $x<$feed_item_count; $x++){
-		    // If the Facebook post has a custom message AND it's not a link
-		    if (isset($obj['data'][$x]['message']) && substr($obj['data'][$x]['message'], 0, 4) != "http") {
-		    	// Start the blurb with the custom message
-		    	$blurb = $obj['data'][$x]['message'] . ' - ';
-		    } else {
-		    	$blurb = '';
-		    }
-		    // Get the "description" field
-		    $description = $obj['data'][$x]['description'];
-		    // Filter out OMI JPIC website articles posted to Facebook since they're already displayed on the homepage
-		    if (substr($description, 0, 21) != "http://omiusajpic.org") {
-			    // Append the description field to the blurb
-			    $blurb .= $description;
-				// Convert string into an array of words
-				$blurb_array = explode(' ', $blurb);
-				$excerpt = '';
-				// Set the maximum length of the excerpt
-				$max_length = 180;
-				// While the excerpt is less than the maximum number of characters, AND there is still more to be displayed
-				while (strlen($excerpt) < $max_length && count($blurb_array) > 0) {
-					// Append the next array element to the excerpt string
-					$excerpt .= array_shift($blurb_array) . ' ';
-				}
-				// Trim whitespace, AND add an ellipsis
-				$blurb = ltrim(rtrim($excerpt));
-				// Only append an ellipsis if Facebook didn't already do so
-				$blurb_length = count($blurb);
-				if (substr($blurb, $blurb_length - 4) != "...") $blurb .= "&hellip;";
-			    // If it exists, use the picture from the link
-			    if (isset($obj['data'][$x]['picture'])) $picture = $obj['data'][$x]['picture'];
-			    // Otherwise use the Facebook page picture
-			    else $picture = $profile_photo_src;
-			    // If the "name" field exists, use that for the title
-			    if (isset($obj['data'][$x]['name'])) $title = $obj['data'][$x]['name'];
-			    // Otherwise use the "message" field
-			    else $title = $obj['data'][$x]['message'];
-			    // when it was posted
-			    $created_time = $obj['data'][$x]['created_time'];
-			    $converted_date_time = date( 'Y-m-d H:i:s', strtotime($created_time));
-			    $ago_value = time_elapsed_string($converted_date_time);
-			    $facebook_permalink = $obj['data'][$x]['permalink_url'];
-			    // Display the Facebook post
-			    // If this is not the last Facebook post
-			    if (($x + 1) < $feed_item_count) {
-			      echo '<p class="facebook-post clearfix">';
-			    // Otherwise it's the last Facebook post
-			    } else {
-			      echo '<p class="facebook-post facebook-post-last clearfix">';
+			// Get the Facebook fields
+			if (isset($obj['data'][$x]['message'])) $message = $obj['data'][$x]['message']; else unset($message);
+			if (isset($obj['data'][$x]['description'])) $description = $obj['data'][$x]['description']; else unset($description);
+
+			// Abort the loop if there's no custom message or description (in which case it's just a photo, and we have no way yet to display it at full width)
+			if (!isset($message) && !isset($description)) continue;
+
+		    /* ADD CUSTOM MESSAGE TO BLURB */
+	    	$blurb = '';
+		    // If the Facebook post has a custom message
+			if (isset($message)) {
+				// Abort the loop if this is a website articles posted to Facebook since it's already displayed on the homepage
+				if (gettype(strpos($message, 'http://omiusajpic.org/20')) == "integer") continue;
+				// Only use the "message" as the blurb if it's not a link
+			    if (substr($message, 0, 4) != "http") {
+			    	// Start the blurb with the custom message
+			    	$blurb = $message;
 			    }
-					echo '<a href="https://www.facebook.com/omiusajpic" target="_blank"><img src="' . get_bloginfo('template_directory') . '/images/facebook_15px.png" alt="Facebook" style="vertical-align:middle; padding-bottom:3px;"></a> ';
-			        echo "<a href='{$facebook_permalink}' class='facebook-title' target='_blank'>";
-			        echo $title . '</a><br>';
-			        echo "<a href='{$facebook_permalink}' target='_blank'>";
-			        echo '<img src="' . $picture . '" style="float:left; padding:2px 5px 0 0;">';
-			        echo "</a>";
-			        echo '<span class="facebook-blurb"><em>' . $ago_value . ' &mdash; </em>' . $blurb;
-			        echo "<br>";
-			        echo "<a href='{$facebook_permalink}' target='_blank'>Read on Facebook &gt;</a></span>";
-			    echo "</p>";
 			}
-		}
+
+		    /* ADD DESCRIPTION TO BLURB */
+		    // If the Facebook post has a description
+		    if (isset($description)) {
+		    	// If the blurb already has content, add a long dash to separate the custom message and description
+		    	if (strlen($blurb) > 0) {
+		    		$blurb .= ' &mdash; ';
+		    	}
+		    	// Append the description
+	    		$blurb .= $description;
+		    }
+
+		    /* CREATE AN EXCERPT */
+			// Convert string into an array of words
+			$blurb_array = explode(' ', $blurb);
+			$excerpt = '';
+			// Set the maximum length of the excerpt
+			$max_length = 180;
+			// While the excerpt is less than the maximum number of characters, AND there is still more to be displayed
+			while (strlen($excerpt) < $max_length && count($blurb_array) > 0) {
+				// Append the next array element to the excerpt string
+				$excerpt .= array_shift($blurb_array) . ' ';
+			}
+			// Trim whitespace, AND add an ellipsis
+			$excerpt = ltrim(rtrim($excerpt));
+			// If it was shortened
+			//echo '<h2>' . strlen($excerpt)
+			if (strlen($excerpt) < strlen($blurb)) {
+				// Only append an ellipsis if Facebook didn't already do so
+				$excerpt_length = count($excerpt);
+				if (substr($excerpt, $excerpt_length - 4) != "...") $excerpt .= "&hellip;";
+			}
+
+		    /* GET THE POST PICTURE */
+		    // If it exists, use the picture from the link
+		    if (isset($obj['data'][$x]['picture'])) $picture = $obj['data'][$x]['picture'];
+		    // Otherwise use the Facebook page picture
+		    else $picture = $profile_photo_src;
+
+		    /* DETERMINE A POST TITLE */
+		    // If the "name" field exists, use that for the title
+		    if (isset($obj['data'][$x]['name'])) $title = $obj['data'][$x]['name'];
+		    // Duplicate the blurb in the title
+		    else $title = $excerpt;
+		    // when it was posted
+		    $created_time = $obj['data'][$x]['created_time'];
+		    $converted_date_time = date( 'Y-m-d H:i:s', strtotime($created_time));
+		    // How long ago the post was published
+		    $ago_value = time_elapsed_string($converted_date_time);
+		    // Link to the Facebook post
+		    $facebook_permalink = $obj['data'][$x]['permalink_url'];
+		    /* DISPLAY THE FACEBOOK POST */
+		    // If this is not the last Facebook post
+		    if (($x + 1) < $feed_item_count) {
+		      echo '<p class="facebook-post clearfix">';
+		    // Otherwise it's the last Facebook post
+		    } else {
+		      echo '<p class="facebook-post facebook-post-last clearfix">';
+		    }
+			echo '<a href="https://www.facebook.com/omiusajpic" target="_blank"><img src="' . get_bloginfo('template_directory') . '/images/facebook_15px.png" alt="Facebook" style="vertical-align:middle; padding-bottom:3px;"></a> ';
+	        echo "<a href='{$facebook_permalink}' class='facebook-title' target='_blank'>";
+	        echo $title . '</a><br>';
+	        echo "<a href='{$facebook_permalink}' target='_blank'>";
+	        echo '<img src="' . $picture . '" style="float:left; padding:2px 5px 0 0;">';
+	        echo "</a>";
+	        echo '<span class="facebook-blurb"><em>' . $ago_value . ' &mdash; </em>' . $excerpt;
+	        echo "<br>";
+	        echo "<a href='{$facebook_permalink}' target='_blank'>Read on Facebook &gt;</a></span>";
+		    echo "</p>";
+		} // END of looping over the posts
+
 		// Convert datetime object to 'time ago' text
 		function time_elapsed_string($datetime, $full = false) {
 		    $now = new DateTime;
