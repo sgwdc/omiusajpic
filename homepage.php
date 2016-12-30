@@ -192,7 +192,7 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 		    
 		    /* DISPLAY THE FACEBOOK POST */
 		    // If this is not the last Facebook post
-		    if (($x + 1) < $feed_item_count) {
+		    if (($x + 1) < $actually_displayed) {
 		      echo '<p class="facebook-post clearfix">';
 		    // Otherwise it's the last Facebook post
 		    } else {
