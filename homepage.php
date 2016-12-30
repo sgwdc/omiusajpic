@@ -112,13 +112,16 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 		$access_token = "145646098930189|TZqBnqmHQBv6q2bHMKVIumMd6_I";
 		//$fields = "id,application,call_to_action,caption,created_time,description,feed_targeting,from,icon,instagram_eligibility,is_hidden,is_instagram_eligible,is_published,link,message,message_tags,name,object_id,parent_id,permalink_url,picture,place,privacy,properties,shares,source,status_type,story,story_tags,targeting,to,type,updated_time,with_tags";
 		$fields = "name,message,description,picture,permalink_url";
-		$num_posts = 2;
-		$json_link = "https://graph.facebook.com/{$fb_page_id}/posts?access_token={$access_token}&fields={$fields}&limit={$num_posts}";
+		$display_posts = 2;
+		// Request more posts than we'll display since some may be filtered out
+		$request_posts = $display_posts * 2;
+		$json_link = "https://graph.facebook.com/{$fb_page_id}/posts?access_token={$access_token}&fields={$fields}&limit={$request_posts}";
 		$json = file_get_contents($json_link);
 		$obj = json_decode($json, true);
 
 	    /* ITERATE OVER THE FACEBOOK POSTS */
 		$feed_item_count = count($obj['data']);
+		$actually_displayed = 0;
 		for($x=0; $x<$feed_item_count; $x++){
 			// Get the Facebook fields
 			$facebook_permalink = $obj['data'][$x]['permalink_url'];
@@ -205,6 +208,9 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 	        echo "<br>";
 	        echo "<a href='{$facebook_permalink}' target='_blank'>See on Facebook &gt;</a></span>";
 		    echo "</p>";
+		    $actually_displayed++;
+			// Stop running the loop if we've reached the number of posts to display
+			if ($actually_displayed >= $display_posts) break;
 		} // END of looping over the posts
 
 		// Convert datetime object to 'time ago' text
