@@ -108,7 +108,7 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 	<?php
 	    /* CONNECT TO THE FACEBOOK GRAPH API TO GET FACEBOOK POSTS */
 		$fb_page_id = "omiusajpic";
-		$profile_photo_src = "https://graph.facebook.com/{$fb_page_id}/picture?type=square";
+		$profile_photo_src = "https://graph.facebook.com/{$fb_page_id}/picture?type=normal";
 		$access_token = "145646098930189|TZqBnqmHQBv6q2bHMKVIumMd6_I";
 		//$fields = "id,application,call_to_action,caption,created_time,description,feed_targeting,from,icon,instagram_eligibility,is_hidden,is_instagram_eligible,is_published,link,message,message_tags,name,object_id,parent_id,permalink_url,picture,place,privacy,properties,shares,source,status_type,story,story_tags,targeting,to,type,updated_time,with_tags";
 		$fields = "name,message,description,picture,permalink_url";
@@ -203,7 +203,7 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 	        echo "</a>";
 	        echo '<span class="facebook-blurb"><em>' . $ago_value . ' &mdash; </em>' . $excerpt;
 	        echo "<br>";
-	        echo "<a href='{$facebook_permalink}' target='_blank'>Read on Facebook &gt;</a></span>";
+	        echo "<a href='{$facebook_permalink}' target='_blank'>See on Facebook &gt;</a></span>";
 		    echo "</p>";
 		} // END of looping over the posts
 
