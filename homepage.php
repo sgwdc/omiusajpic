@@ -121,8 +121,12 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 		$feed_item_count = count($obj['data']);
 		for($x=0; $x<$feed_item_count; $x++){
 			// Get the Facebook fields
+			$facebook_permalink = $obj['data'][$x]['permalink_url'];
+			$created_time = $obj['data'][$x]['created_time'];
 			if (isset($obj['data'][$x]['message'])) $message = $obj['data'][$x]['message']; else unset($message);
 			if (isset($obj['data'][$x]['description'])) $description = $obj['data'][$x]['description']; else unset($description);
+			if (isset($obj['data'][$x]['name'])) $name = $obj['data'][$x]['name']; else unset($name);
+			if (isset($obj['data'][$x]['picture'])) $picture = $obj['data'][$x]['picture']; else unset($picture);
 
 			// Abort the loop if there's no custom message or description (in which case it's just a photo, and we have no way yet to display it at full width)
 			if (!isset($message) && !isset($description)) continue;
@@ -172,24 +176,17 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 				if (substr($excerpt, $excerpt_length - 4) != "...") $excerpt .= "&hellip;";
 			}
 
-		    /* GET THE POST PICTURE */
-		    // If it exists, use the picture from the link
-		    if (isset($obj['data'][$x]['picture'])) $picture = $obj['data'][$x]['picture'];
-		    // Otherwise use the Facebook page picture
-		    else $picture = $profile_photo_src;
+		    // If the post has no picture, use the OMI JPIC profile photo
+		    if (!isset($picture)) $picture = $profile_photo_src;
 
-		    /* DETERMINE A POST TITLE */
-		    // If the "name" field exists, use that for the title
-		    if (isset($obj['data'][$x]['name'])) $title = $obj['data'][$x]['name'];
-		    // Duplicate the blurb in the title
-		    else $title = $excerpt;
+		    // If the post has no "name" field, duplicate the excerpt for the title
+		    if (!isset($name)) $name = $excerpt;
+
 		    // when it was posted
-		    $created_time = $obj['data'][$x]['created_time'];
 		    $converted_date_time = date( 'Y-m-d H:i:s', strtotime($created_time));
 		    // How long ago the post was published
 		    $ago_value = time_elapsed_string($converted_date_time);
-		    // Link to the Facebook post
-		    $facebook_permalink = $obj['data'][$x]['permalink_url'];
+		    
 		    /* DISPLAY THE FACEBOOK POST */
 		    // If this is not the last Facebook post
 		    if (($x + 1) < $feed_item_count) {
@@ -200,7 +197,7 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 		    }
 			echo '<a href="https://www.facebook.com/omiusajpic" target="_blank"><img src="' . get_bloginfo('template_directory') . '/images/facebook_15px.png" alt="Facebook" style="vertical-align:middle; padding-bottom:3px;"></a> ';
 	        echo "<a href='{$facebook_permalink}' class='facebook-title' target='_blank'>";
-	        echo $title . '</a><br>';
+	        echo $name . '</a><br>';
 	        echo "<a href='{$facebook_permalink}' target='_blank'>";
 	        echo '<img src="' . $picture . '" style="float:left; padding:2px 5px 0 0;">';
 	        echo "</a>";
