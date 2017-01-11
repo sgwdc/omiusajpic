@@ -147,6 +147,9 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 			    }
 			}
 
+			// If we've reached this point, this Facebook post will be displayed
+		    $actually_displayed++;
+
 		    /* ADD DESCRIPTION TO BLURB */
 		    // If the Facebook post has a description
 		    if (isset($description)) {
@@ -192,7 +195,7 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 		    
 		    /* DISPLAY THE FACEBOOK POST */
 		    // If this is not the last Facebook post
-		    if (($x + 1) < $actually_displayed) {
+		    if ($actually_displayed < $display_posts) {
 		      echo '<p class="facebook-post clearfix">';
 		    // Otherwise it's the last Facebook post
 		    } else {
@@ -208,7 +211,6 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 	        echo "<br>";
 	        echo "<a href='{$facebook_permalink}' target='_blank'>See on Facebook &gt;</a></span>";
 		    echo "</p>";
-		    $actually_displayed++;
 			// Stop running the loop if we've reached the number of posts to display
 			if ($actually_displayed >= $display_posts) break;
 		} // END of looping over the posts
