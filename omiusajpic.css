@@ -330,7 +330,7 @@ table#navbar {
 	color: #fff;
 	font-size:18px;
 	/* Single pixel border across the top */
-	border-top: 1px solid #fff;
+	border-top: 1px solid #ccc;
 	/* 12px border across the bottom */
 	border-bottom: 12px solid #0c1208;
 	/* Not sure why this is necessary but it avoids a border around the td cells */
@@ -339,7 +339,7 @@ table#navbar {
 /* Add a vertical divider after each button (except the last) */
 table#navbar td {
 	text-align: center;
-	border-right: 1px #fff solid;
+	border-right: 1px #ccc solid;
 }
 table#navbar td:last-child {
 	border:0;
@@ -380,7 +380,7 @@ table#navbar td#home_icon:hover, table#navbar td#home_icon.current {
 }
 /* White border along the top */
 div.rev_slider_wrapper {
-	border-top:1px #fff solid;
+	border-top:1px #ccc solid;
 }
 /* END: Slider Revolution */
 
