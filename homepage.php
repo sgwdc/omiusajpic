@@ -242,10 +242,38 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 	?>
 	<p><a href="https://www.facebook.com/omiusajpic" target="_blank">See more Facebook updates &gt;</a></p>
 
-	<br>
-	<h3><a href="/resources/video/" class="darkgraylink">Video Updates</a></h3>
-	<iframe width="375" height="210" src="https://www.youtube.com/embed/gTRhyIcqDhQ" frameborder="0" allowfullscreen></iframe>
-	<p><a href="/resources/video/">See more video updates &gt;</a></p>
+	<?php
+	/* FEATURED VIDEO */
+	// Get the most recent, published post in the category "homepage-video"
+	$args = array(
+		'post_type' => 'post',
+		'category_name' => 'homepage-video',
+		'post_status' => 'publish',
+		'orderby' => 'date',
+		'order' => 'DESC',
+		'posts_per_page' => 1
+	);
+	$recent_homepage_video_post = get_posts( $args );
+	// If a recent homepage video post was found
+	if (count($recent_homepage_video_post) > 0) {
+		$post_content = $recent_homepage_video_post[0] -> post_content;
+		// Search the post body content for '<iframe ...>'
+		$found = preg_match("/<iframe (.*)>/i", $post_content, $matches);
+		if ($found) {
+			$iframe_part = $matches[1];
+			// Search the iframe for content inside 'src="..."'
+			$found = preg_match( '/src="([^"]*)"/i', $iframe_part, $matches );
+			if ($found) {
+				$youtube_src = $matches[1];
+				//echo $youtube_src;
+				echo '<br><h3><a href="/resources/video/" class="darkgraylink">Featured Video</a></h3>';
+				echo '<iframe width="375" height="210" src="' . $youtube_src . '" frameborder="0" allowfullscreen></iframe>';
+				echo '<p><a href="/resources/video/">See more video updates &gt;</a></p>';
+
+			}
+		}
+	}
+	?>
 </div>
 
 <br>
