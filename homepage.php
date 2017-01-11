@@ -26,7 +26,7 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 
 <div id="homepage-body">
 	<!-- News -->
-	<h3><a href="news" class="darkgraylink">Website Updates</a></h3>
+	<h3><a href="news" class="darkgraylink">Features</a></h3>
 	<?php
 	// Get homepage posts
 	$args = array(
@@ -87,11 +87,11 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 	<?php
 	endforeach;
 	?>
-	<p><a href="/news/">See more website updates &gt;</a></p>
+	<p><a href="/news/">See more updates &gt;</a></p>
 </div>
 
 <div id="homepage-sidebar">
-	<h3><a href="news" class="darkgraylink">Social Media Updates</a></h3>
+	<h3><a href="news" class="darkgraylink">Follow Us</a></h3>
 
 	<div class="clearfix">
 		<div id="social-media-left">
