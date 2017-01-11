@@ -220,41 +220,37 @@ h2.newsheadline {
 }
 
 /* FOOTER */
-#footer {
+div#footer {
 	clear: both;
 	background: #4281bf;
 	margin: 0;
-	padding: 12px 12px 6px 12px;
-	font: 12px/14px 'Trebuchet MS', Arial, sans-serif;
+	padding: 22px 22px 22px 22px;
+	font: 14px/16px 'Trebuchet MS', Arial, sans-serif;
 	color: #fff;
-	text-align: center;
 	border-top: 6px solid #0c1208;
 }
-#footer a:link, #footer a:visited {
-	color: #fff;
+div#footer div.footer-column {
+	float:left;
+	width:212px;
+	padding-right:20px;
 }
-#footer a:hover {
-	color: #fff;
+
+div#footer .main-section {
+	margin-bottom:5px;
 }
-#footer p {
-	margin: 0;
-	padding: 0 0 8px 0;
+div#footer ul {
+	list-style-type:disc;
+	padding-left:10px;
 }
-#footer ul {
-	margin: 0;
-	padding: 0 0 8px 0;
-	list-style-type: none;
+div#footer a {
+	color:#fff;
+	text-decoration: none;
 }
-#footer ul li {
-	display: inline;
-	padding: 0 0 0 8px;
-	margin: 0 0 0 5px;
-	background: url(images/icon_tiny_pipe_white.gif) no-repeat left;
+
+div#footer a:hover {
+	text-decoration: underline;
 }
-/* Omit icon_tiny_pipe_white.gif for the first item in the footer navigation */
-#footer ul li:nth-of-type(1) {
-	background: none;
-}
+/* END of footer */
 
 .alignleft {
 	float: left;

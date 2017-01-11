@@ -1,19 +1,68 @@
 		<!-- FOOTER -->
 		<div id="footer">
-			<ul>
-				<li><a href="/">Homepage</a></li>
-				<li><a href="/about/">About Us</a></li>
-				<li><a href="/issues/">Issues</a></li>
-				<li><a href="/our-impact/">Our Impact</a></li>
-				<li><a href="/action/">Get Involved</a></li>
-				<li><a href="/resources/">Resources</a></li>
-				<li><a href="/about/partners/">Partners</a></li>
-				<li><a href="http://secure.oblatesusa.org/p-2023-donation.aspx?source=M17IGI202" target="_blank">Support Us</a></li>
-				<li><a href="/espanol">En Español</a></li>
-			</ul>
-			<p>Oblates JPIC Office 391 Michigan Ave NE, Washington, DC 20017 USA | phone (202) 529-4505 | fax (202) 529-4572<br>
-			&copy;<?php echo date('Y') ?> Missionary Oblates of Mary Immaculate | <a href="/about/privacy">Privacy Policy</a> | <a href="/about/contact">Contact Us</a></p>
-			<p>Website by <a href="http://www.livingstreets.com/" title="Living Streets Consulting" target="_blank">Living Streets Consulting</a></p>
+			<div class="clearfix">
+
+				<div class="footer-column" style="padding-top:10px;">
+					<a href="/"><img src="<?php bloginfo('template_directory') ?>//images/logo_v2_100px.png" width="100" height="100"></a><br>
+					<h3 class="main-section"><a href="/">Oblates JPIC</a></h3>
+					391 Michigan Ave, NE<br>
+					Washington, DC 20017<br>
+					Phone: (202) 529-4505<br>
+					Fax: (202) 529-4572<br>
+					<strong><a href="/contact/">Contact Us</a></strong>
+				</div>
+
+				<?php
+					echo '<div class="footer-column">';
+						displaySectionPages('about');
+						displaySectionPages('issues');
+					echo '</div>';
+
+					echo '<div class="footer-column">';
+						displaySectionPages('our-impact');
+						displaySectionPages('resources');
+					echo '</div>';
+				?>
+
+				<div class="footer-column">
+					<h3 class="main-section"><a href="/ministries/">OMI Ministries</a></h3>
+					<br>
+					<h3 class="main-section"><a href="/partners/">Partners</a></h3>
+					<br>
+					<h3 class="main-section"><a href="http://secure.oblatesusa.org/p-2023-donation.aspx?source=M17IGI202" target="_blank">Support Us</a></h3>
+				</div>
+
+				<?php
+					function displaySectionPages($page_slug) {
+						$page_details = get_page_by_path( $page_slug );
+						$page_title = $page_details -> post_title;
+						$page_id = $page_details -> ID;
+						// Get any subpages for this page
+						$args = array(
+							'post_type' => 'page',
+							'post_status' => 'publish',
+							'child_of' => $page_id,
+							'depth' => 1,
+							'sort_column' => 'menu_order',
+							'title_li' => null,
+							'echo' => false,
+						);
+						$subnav_menu = wp_list_pages( $args );
+
+						echo '<h3 class="main-section"><a href="/' . $page_slug . '/">' . $page_title . '</a></h3>';
+						// If this page has any subpages, display them
+						if (strlen($subnav_menu)) {
+							echo '<ul>';
+							echo $subnav_menu;
+							echo '</ul>';
+						}
+					}
+				?>
+			</div><!-- end clearfix -->
+
+			<br>
+			<p style="text-align:center;">&copy; Copyright <?php echo date('Y') ?> Missionary Oblates of Mary Immaculate</p>
+
 			<?php wp_footer(); ?>
 		</div><!-- end #footer -->
 	</div><!-- end #container -->
