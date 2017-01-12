@@ -47,21 +47,25 @@ $news_title = 'Recent News';
     <div id="interior-sidebar">
 
 	    <?php
-	    	// Get any subpages for this page
-	    	$args = array(
-	    		'post_status' => 'publish',
-	    		'child_of' => $post -> ID,
-	    		'depth' => 1,
-	    		'title_li' => null,
-	    		'echo' => false
-	    	);
-	    	$subnav_menu = wp_list_pages( $args );
-	    	
-	    	// If this page has any subpages, display them
-	    	if (strlen($subnav_menu)) {
-		    	echo '<h4>Sections</h4><ul>';
-		    	echo $subnav_menu;
-				echo '</ul>';
+	    	// Don't try to access the post ID if this is the 404 page, etc.
+	    	if (isset($post)) {
+		    	// Get any subpages for this page
+		    	$args = array(
+		    		'post_status' => 'publish',
+		    		'child_of' => $post -> ID,
+		    		'depth' => 1,
+		    		'title_li' => null,
+		    		'echo' => false
+		    	);
+		    	$subnav_menu = wp_list_pages( $args );
+		    	
+		    	// If this page has any subpages, display them
+		    	if (strlen($subnav_menu)) {
+			    	echo '<h4>Sections</h4><ul>';
+			    	echo $subnav_menu;
+					echo '</ul>';
+		    	}
+
 	    	}
 	    ?>
 
