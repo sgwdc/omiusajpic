@@ -58,6 +58,7 @@
 	<a name="top"></a>
 	<div id="container">
 
+		<?php /* Disable for now until we implement Spanish
 		<!-- HEADER -->
 		<div id="topnav">
 			<?php if ($newspage || !is_home()) : ?>
@@ -69,6 +70,7 @@
 			<a href="<?php bloginfo('url'); ?>">English</a>
 			<?php endif; ?>
 		</div><!-- end #topnav -->
+		*/ ?>
 
 		<div id="masthead">
 			<div style="width:125px; float:left; padding:10px 75px 0 10px;">
