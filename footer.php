@@ -3,7 +3,7 @@
 			<div class="clearfix">
 
 				<div class="footer-column" style="padding-top:10px;">
-					<a href="/"><img src="<?php bloginfo('template_directory') ?>//images/logo_v2_100px.png" width="100" height="100"></a><br>
+					<a href="/"><img src="<?php bloginfo('template_directory') ?>/images/logo_v2_100px.png" width="100" height="100"></a><br>
 					<h3 class="main-section"><a href="/">Oblates JPIC</a></h3>
 					391 Michigan Ave, NE<br>
 					Washington, DC 20017<br>
