@@ -27,8 +27,14 @@ Template Name: Email Lists
 	<!-- Interior contents mid-width container -->
 	<div id="interior-body">
 		<h1>Email Lists</h1>
-		<p>Please support the work of this office by subscribing to our weekly news updates and action alerts:</p>
-		<br>
+
+		<?php 
+		// Start the Loop
+		while ( have_posts() ) : the_post();
+			// Display page content
+			echo get_the_content();
+		endwhile;
+		?>
 
 		<form action="http://omiusajpic.us1.list-manage.com/subscribe/post?u=cc5976ca8e2c41ca79b0c739c&amp;id=dacd45ed3a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
 			<h4 class="emailupdatesheader"><label>Receive Weekly News Updates</label></h4>
