@@ -43,6 +43,7 @@
 				'post_status' => 'publish',
 				'child_of' => $post -> ID,
 				'depth' => 1,
+				'sort_column' => 'menu_order',
 				'title_li' => null,
 				'echo' => false
 			);
