@@ -252,18 +252,14 @@ div#footer a:hover {
 }
 /* END of footer */
 
-.alignleft {
-	float: left;
-}
-.alignright {
-	float: right;
-}
-img.alignleft {
-	margin: 0 5px 5px 0;
-}
-img.alignright {
-	margin: 0 0 5px 5px;
-}
+/* WordPress built-in image alignment */
+img.alignright { float: right; margin: 0 0 1em 1em; }
+img.alignleft { float: left; margin: 0 1em 1em 0; }
+img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+.alignright { float: right; }
+.alignleft { float: left; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+
 /* survey */
 form.wpcf7-form textarea {
 	width: 300px;
