@@ -96,6 +96,6 @@
 				</div>
 			</div>
 			<div style="width:139px; float:right; color:#fff; padding:25px 10px 0 0;">
-				<a href="http://www.omiusa.org/" target="_blank"><img src="<?php bloginfo('template_directory') ?>/images/omi_logo_color.png" alt="OMI logo"></a>
+				<a href="http://www.omiusa.org/" target="_blank"><img src="<?php bloginfo('template_directory') ?>/images/omi_logo_color_v2_mask_139x95.png" alt="OMI logo"></a>
 			</div>
 		</div><!-- end #masthead -->
