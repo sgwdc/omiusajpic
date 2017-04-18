@@ -21,5 +21,6 @@
 	<td<?php if($highest_page_slug =="ministries") echo ' class="current"'; ?>><a href="/ministries/">OMI Ministries</a></td>
 	<td<?php if($highest_page_slug =="resources") echo ' class="current"'; ?>><a href="/resources/">Resources</a></td>
 	<td<?php if($highest_page_slug =="partners") echo ' class="current"'; ?>><a href="/about/partners/">Partners</a></td>
+	<td<?php if($highest_page_slug =="action") echo ' class="current"'; ?>><a href="/action/">Take Action</a></td>
 	<td><a href="http://secure.oblatesusa.org/p-2023-donation.aspx?source=M17IGI202" target="_blank">Support Us</a></td>
 </tr></table>
