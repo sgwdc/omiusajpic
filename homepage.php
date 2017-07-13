@@ -110,8 +110,8 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 		$fb_page_id = "omiusajpic";
 		$profile_photo_src = "https://graph.facebook.com/{$fb_page_id}/picture?type=normal";
 		$access_token = "145646098930189|TZqBnqmHQBv6q2bHMKVIumMd6_I";
-		//$fields = "id,application,call_to_action,caption,created_time,description,feed_targeting,from,icon,instagram_eligibility,is_hidden,is_instagram_eligible,is_published,link,message,message_tags,name,object_id,parent_id,permalink_url,picture,place,privacy,properties,shares,source,status_type,story,story_tags,targeting,to,type,updated_time,with_tags";
-		$fields = "name,message,description,picture,permalink_url";
+		//$fields = "id,application,call_to_action,caption,created_time,description,feed_targeting,from,icon,instagram_eligibility,is_hidden,is_instagram_eligible,is_published,link,message,message_tags,name,object_id,parent_id,permalink_url,picture,place,privacy,properties,shares,source,status_type,story,story_tags,targeting,to,type,updatWhy ed_time,with_tags";
+		$fields = "name,message,description,picture,permalink_url,created_time";
 		$display_posts = 2;
 		// Request more posts than we'll display since some may be filtered out
 		$request_posts = $display_posts * 2;
