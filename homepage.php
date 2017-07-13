@@ -114,7 +114,7 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 		$fields = "name,message,description,picture,permalink_url,created_time";
 		$display_posts = 2;
 		// Request more posts than we'll display since some may be filtered out
-		$request_posts = $display_posts * 2;
+		$request_posts = $display_posts * 3;
 		$json_link = "https://graph.facebook.com/{$fb_page_id}/posts?access_token={$access_token}&fields={$fields}&limit={$request_posts}";
 		$json = file_get_contents($json_link);
 		$obj = json_decode($json, true);
