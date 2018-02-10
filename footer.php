@@ -29,7 +29,7 @@
 					<br>
 					<h3 class="main-section"><a href="/partners/">Partners</a></h3>
 					<br>
-					<h3 class="main-section"><a href="http://secure.oblatesusa.org/p-2023-donation.aspx?source=M17IGI202" target="_blank">Support Us</a></h3>
+					<h3 class="main-section"><a href="https://secure.oblatesusa.org/p-2023-donation.aspx?source=M17IGI202" target="_blank">Support Us</a></h3>
 				</div>
 
 				<?php
