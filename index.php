@@ -48,6 +48,10 @@ if (is_page() && $post->post_parent != 0) {
 }
 echo $breadcrumb;
 ?>
+<!-- Insert GTranslate language selector -->
+<div style="width:165px; float:right; margin-top:-5px;">
+	<?php echo do_shortcode('[gtranslate]'); ?>
+</div>
 </div> 
 
 <?php

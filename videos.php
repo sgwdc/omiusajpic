@@ -13,7 +13,14 @@ Template Name: Videos
 
 <!-- MAIN SECTION -->
 <div id="main" class="maininterior">
-	<a name="top"></a>
+	<!-- Breadcrumb -->
+	<div id="topbreadcrumb">    	
+		Videos
+		<!-- Insert GTranslate language selector -->
+		<div style="width:165px; float:right; margin-top:-5px;">
+			<?php echo do_shortcode('[gtranslate]'); ?>
+		</div>
+	</div>
 
 	<?php
 		// Include the sidebar template sidebar-interior.php
