@@ -455,3 +455,22 @@ p.homepage-post-last, p.facebook-post-last {
 	border-bottom-style:none;
 	padding-bottom:0;
 }
+
+/* GTranslate switcher */
+div#gtranslate {
+	width:325px;
+	float:right;
+	margin-top:-5px;
+	/*
+	padding:10px 0;
+	*/
+	line-height:26px;
+	text-transform:initial;
+	font-weight:initial;
+	font-size:initial;
+	text-align:right;
+}
+div#gtranslate div.switcher {
+	float:right;
+	padding-left:5px;
+}

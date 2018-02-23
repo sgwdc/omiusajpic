@@ -23,7 +23,8 @@ echo do_shortcode('[rev_slider alias="homepage-slider"]');
 <div id="topbreadcrumb">
 	Homepage
 	<!-- Insert GTranslate language selector -->
-	<div style="width:165px; float:right; margin-top:-5px;">
+	<div id="gtranslate">
+		Translate this page:
 		<?php echo do_shortcode('[gtranslate]'); ?>
 	</div>
 </div>

@@ -1,6 +1,6 @@
 <?php
 	// Set a version number to ensure any obsolete CSS and JS files are not cached
-	$version = 1;
+	$version = 2;
 
 	/* BLOCK ANY REQUESTS FROM GOOGLE TO DEV SERVER */
 	// If this is the local dev server

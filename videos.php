@@ -17,7 +17,8 @@ Template Name: Videos
 	<div id="topbreadcrumb">    	
 		Videos
 		<!-- Insert GTranslate language selector -->
-		<div style="width:165px; float:right; margin-top:-5px;">
+		<div id="gtranslate">
+			Translate this page:
 			<?php echo do_shortcode('[gtranslate]'); ?>
 		</div>
 	</div>
